@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles.png-095c98c24d1d1e850a2ebc554d580525.stex"
+path="res://.import/RPGpack_sheet.png-97c6952061ce163658026694c87c2692.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LegendOfZelda/Assets/tiles.png"
-dest_files=[ "res://.import/tiles.png-095c98c24d1d1e850a2ebc554d580525.stex" ]
+source_file="res://LegendOfZelda/Assets/RPGpack_sheet.png"
+dest_files=[ "res://.import/RPGpack_sheet.png-97c6952061ce163658026694c87c2692.stex" ]
 
 [params]
 

@@ -1,28 +1,22 @@
-extends Area2D
+extends KinematicBody2D
 
 export var speed = 400
 
-var screen_size
+var velocity = Vector2()
 
-func _ready():
-	screen_size = get_viewport_rect().size
-	
-func _process(delta):
-	# Calculate movement vector.
-	var velocity = Vector2()
-	if Input.is_action_pressed("ui_right"):
+func get_input():
+	# Detect up/down/left/right keystate and only move when pressed
+	velocity = Vector2()
+	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed('ui_left'):
 		velocity.x -= 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed('ui_down'):
 		velocity.y += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		$AnimatedSprite.play()
-	else:
-		$AnimatedSprite.stop()
-		
-	# Update position.
-	position += velocity * delta
+	velocity = velocity.normalized() * speed
+
+func _physics_process(delta):
+	get_input()
+	move_and_collide(velocity * delta)
