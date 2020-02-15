@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RPGpack_sheet.png-97c6952061ce163658026694c87c2692.stex"
+path="res://.import/sanic.jpg-a6a3d65f3d486a393c64da1a1e482729.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LegendOfZelda/Assets/RPGpack_sheet.png"
-dest_files=[ "res://.import/RPGpack_sheet.png-97c6952061ce163658026694c87c2692.stex" ]
+source_file="res://LegendOfZelda/Assets/sanic.jpg"
+dest_files=[ "res://.import/sanic.jpg-a6a3d65f3d486a393c64da1a1e482729.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
