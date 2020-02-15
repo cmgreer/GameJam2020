@@ -41,7 +41,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 
-[node name="PopupPanel" type="PopupPanel" parent="."]
+[node name="HunterL1" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
 custom_styles/panel = SubResource( 3 )
@@ -49,7 +49,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBorder" type="ColorRect" parent="PopupPanel"]
+[node name="ChoicesBorder" type="ColorRect" parent="HunterL1"]
 margin_right = 8.0
 margin_bottom = 8.0
 color = Color( 0.160784, 0.105882, 0.105882, 1 )
@@ -57,7 +57,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBox" type="ColorRect" parent="PopupPanel/ChoicesBorder"]
+[node name="ChoicesBox" type="ColorRect" parent="HunterL1/ChoicesBorder"]
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 355.0
@@ -68,7 +68,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Description" type="RichTextLabel" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
+[node name="Description" type="RichTextLabel" parent="HunterL1/ChoicesBorder/ChoicesBox"]
 margin_left = 4.0
 margin_top = 5.0
 margin_right = 226.0
@@ -80,7 +80,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice0" type="RichTextLabel" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
+[node name="Choice0" type="RichTextLabel" parent="HunterL1/ChoicesBorder/ChoicesBox"]
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 132.0
@@ -92,7 +92,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice1" type="RichTextLabel" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
+[node name="Choice1" type="RichTextLabel" parent="HunterL1/ChoicesBorder/ChoicesBox"]
 margin_left = 190.0
 margin_top = 50.0
 margin_right = 297.0
@@ -104,7 +104,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer0" type="ColorRect" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
+[node name="Pointer0" type="ColorRect" parent="HunterL1/ChoicesBorder/ChoicesBox"]
 margin_left = 18.0
 margin_top = 52.0
 margin_right = 20.0
@@ -114,7 +114,90 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer1" type="ColorRect" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
+[node name="Pointer1" type="ColorRect" parent="HunterL1/ChoicesBorder/ChoicesBox"]
+margin_left = 184.0
+margin_top = 52.0
+margin_right = 186.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HunterL2" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBorder" type="ColorRect" parent="HunterL2"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="HunterL2/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="HunterL2/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "I used to have a PET, a small rabbit that I cared for very much. But he’s gone and left me. Now I’m all alone."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice0" type="RichTextLabel" parent="HunterL2/ChoicesBorder/ChoicesBox"]
+margin_left = 25.0
+margin_top = 50.0
+margin_right = 132.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_fonts/normal_font = SubResource( 5 )
+text = "Are you sure he’s not just lost?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice1" type="RichTextLabel" parent="HunterL2/ChoicesBorder/ChoicesBox"]
+margin_left = 190.0
+margin_top = 50.0
+margin_right = 297.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_fonts/normal_font = SubResource( 5 )
+text = "I’m about to leave you, too. Byeeeeeeeeeeeee!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer0" type="ColorRect" parent="HunterL2/ChoicesBorder/ChoicesBox"]
+margin_left = 18.0
+margin_top = 52.0
+margin_right = 20.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer1" type="ColorRect" parent="HunterL2/ChoicesBorder/ChoicesBox"]
 margin_left = 184.0
 margin_top = 52.0
 margin_right = 186.0
@@ -124,5 +207,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="." to="." method="_on_7UP_body_entered"]
-[connection signal="about_to_show" from="PopupPanel" to="." method="_on_PopupPanel_about_to_show"]
-[connection signal="popup_hide" from="PopupPanel" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="HunterL1" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="popup_hide" from="HunterL1" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="HunterL2" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="popup_hide" from="HunterL2" to="." method="_on_PopupPanel_popup_hide"]
