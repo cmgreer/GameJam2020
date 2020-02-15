@@ -12,11 +12,11 @@ func change_selected_color():
 	
 	match selected_option:
 		0:
-			$Pointer0.color = Color.white
+			$Pointer0.color = Color.yellow
 		1:
-			$Pointer1.color = Color.white
+			$Pointer1.color = Color.yellow
 		2:
-			$Pointer2.color = Color.white
+			$Pointer2.color = Color.yellow
 
 func _input(event):
 	if event is InputEventKey:
