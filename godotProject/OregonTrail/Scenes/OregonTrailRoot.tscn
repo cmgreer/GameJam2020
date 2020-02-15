@@ -1,0 +1,60 @@
+[gd_scene format=2]
+
+[node name="OregonTrailRoot" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Art" type="ColorRect" parent="Panel"]
+margin_right = 14.0
+margin_bottom = 14.0
+rect_scale = Vector2( 16, 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterBorder" type="ColorRect" parent="Panel"]
+margin_left = 224.0
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterBox" type="ColorRect" parent="Panel/CharacterBorder"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 86.0
+margin_bottom = 170.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox"]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="ChoicesBorder" type="ColorRect" parent="Panel"]
+margin_top = 126.0
+margin_right = 224.0
+margin_bottom = 180.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="Panel/ChoicesBorder"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 224.0
+margin_bottom = 44.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
