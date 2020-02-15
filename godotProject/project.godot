@@ -24,7 +24,6 @@ default_bus_layout=""
 
 [autoload]
 
-Overworld="res://LegendOfZelda/Scenes/Overworld.tscn"
 globalSingleton="*res://Global.gd"
 
 [display]
