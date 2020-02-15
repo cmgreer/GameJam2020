@@ -68,6 +68,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Dead" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon"]
+margin_right = 20.0
+margin_bottom = 20.0
+color = Color( 0.262745, 0.219608, 0.219608, 1 )
+
 [node name="HunterIcon2" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox"]
 margin_left = 5.0
 margin_top = 33.0
@@ -83,6 +88,14 @@ margin_top = 4.0
 margin_right = 75.0
 margin_bottom = 17.0
 custom_fonts/normal_font = SubResource( 1 )
+
+[node name="Dead2" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon2"]
+margin_right = 20.0
+margin_bottom = 20.0
+color = Color( 0.262745, 0.219608, 0.219608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HunterIcon3" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox"]
 margin_left = 5.0
@@ -100,6 +113,14 @@ margin_right = 75.0
 margin_bottom = 17.0
 custom_fonts/normal_font = SubResource( 1 )
 
+[node name="Dead3" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon3"]
+margin_right = 20.0
+margin_bottom = 20.0
+color = Color( 0.262745, 0.219608, 0.219608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="HunterIcon4" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox"]
 margin_left = 5.0
 margin_top = 81.0
@@ -115,6 +136,14 @@ margin_top = 4.0
 margin_right = 75.0
 margin_bottom = 17.0
 custom_fonts/normal_font = SubResource( 1 )
+
+[node name="Dead4" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon4"]
+margin_right = 20.0
+margin_bottom = 20.0
+color = Color( 0.262745, 0.219608, 0.219608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HunterIcon5" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox"]
 margin_left = 5.0
@@ -135,6 +164,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Dead5" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon5"]
+margin_right = 20.0
+margin_bottom = 20.0
+color = Color( 0.262745, 0.219608, 0.219608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="HunterIcon6" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox"]
 margin_left = 5.0
 margin_top = 129.0
@@ -150,6 +187,14 @@ margin_top = 4.0
 margin_right = 75.0
 margin_bottom = 17.0
 custom_fonts/normal_font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dead6" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon6"]
+margin_right = 20.0
+margin_bottom = 20.0
+color = Color( 0.262745, 0.219608, 0.219608, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -194,21 +239,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer" type="ColorRect" parent="Panel/ChoicesBorder/ChoicesBox/Choice0"]
-margin_left = -4.0
-margin_top = 2.0
-margin_right = -2.0
-margin_bottom = 6.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Choice1" type="RichTextLabel" parent="Panel/ChoicesBorder/ChoicesBox"]
 margin_left = 94.0
 margin_top = 39.0
 margin_right = 146.0
 margin_bottom = 50.0
 custom_fonts/normal_font = SubResource( 3 )
+text = "Run Away!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -219,6 +256,34 @@ margin_top = 39.0
 margin_right = 206.0
 margin_bottom = 50.0
 custom_fonts/normal_font = SubResource( 3 )
+text = "Intimidate it"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer0" type="ColorRect" parent="Panel/ChoicesBorder/ChoicesBox"]
+margin_left = 14.0
+margin_top = 41.0
+margin_right = 16.0
+margin_bottom = 45.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer1" type="ColorRect" parent="Panel/ChoicesBorder/ChoicesBox"]
+margin_left = 90.0
+margin_top = 41.0
+margin_right = 92.0
+margin_bottom = 45.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer2" type="ColorRect" parent="Panel/ChoicesBorder/ChoicesBox"]
+margin_left = 151.0
+margin_top = 41.0
+margin_right = 153.0
+margin_bottom = 45.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
