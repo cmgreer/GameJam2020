@@ -22,6 +22,10 @@ run/main_scene="res://OregonTrail/Scenes/OregonTrailRoot.tscn"
 
 default_bus_layout=""
 
+[autoload]
+
+root="*res://Global.gd"
+
 [display]
 
 window/size/width=320
