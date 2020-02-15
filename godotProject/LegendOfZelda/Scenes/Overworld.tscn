@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://LegendOfZelda/Scenes/7UP.tscn" type="PackedScene" id=3]
+[ext_resource path="res://LegendOfZelda/Scenes/Witch.tscn" type="PackedScene" id=4]
+[ext_resource path="res://LegendOfZelda/Scenes/Brad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://LegendOfZelda/Scenes/Cobbler.tscn" type="PackedScene" id=6]
 
 [node name="Map" type="Node"]
 __meta__ = {
@@ -34,3 +37,12 @@ speed = 300
 
 [node name="7UP" parent="." instance=ExtResource( 3 )]
 position = Vector2( 458.804, 1493.96 )
+
+[node name="Witch" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7, 1291 )
+
+[node name="Brad" parent="." instance=ExtResource( 5 )]
+position = Vector2( -187.402, 1304.72 )
+
+[node name="Cobbler" parent="." instance=ExtResource( 6 )]
+position = Vector2( 203.493, 1297.3 )
