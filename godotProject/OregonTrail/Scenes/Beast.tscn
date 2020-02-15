@@ -85,7 +85,7 @@ __meta__ = {
 [node name="Dead" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon"]
 margin_right = 20.0
 margin_bottom = 20.0
-color = Color( 0.262745, 0.219608, 0.219608, 1 )
+color = Color( 0.262745, 0.219608, 0.219608, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -122,7 +122,7 @@ __meta__ = {
 [node name="Dead2" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon2"]
 margin_right = 20.0
 margin_bottom = 20.0
-color = Color( 0.262745, 0.219608, 0.219608, 1 )
+color = Color( 0.262745, 0.219608, 0.219608, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -146,7 +146,7 @@ custom_fonts/normal_font = SubResource( 1 )
 [node name="Dead3" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon3"]
 margin_right = 20.0
 margin_bottom = 20.0
-color = Color( 0.262745, 0.219608, 0.219608, 1 )
+color = Color( 0.262745, 0.219608, 0.219608, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -170,7 +170,7 @@ custom_fonts/normal_font = SubResource( 1 )
 [node name="Dead4" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon4"]
 margin_right = 20.0
 margin_bottom = 20.0
-color = Color( 0.262745, 0.219608, 0.219608, 1 )
+color = Color( 0.262745, 0.219608, 0.219608, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -197,7 +197,7 @@ __meta__ = {
 [node name="Dead5" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon5"]
 margin_right = 20.0
 margin_bottom = 20.0
-color = Color( 0.262745, 0.219608, 0.219608, 1 )
+color = Color( 0.262745, 0.219608, 0.219608, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -224,7 +224,7 @@ __meta__ = {
 [node name="Dead6" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/HunterIcon6"]
 margin_right = 20.0
 margin_bottom = 20.0
-color = Color( 0.262745, 0.219608, 0.219608, 1 )
+color = Color( 0.262745, 0.219608, 0.219608, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

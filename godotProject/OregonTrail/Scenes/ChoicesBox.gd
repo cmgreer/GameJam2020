@@ -40,6 +40,18 @@ func _input(event):
 				2:
 					pass #TODO: choice 2
 
+func status_character():
+	$Pointer0.color = Color("3C2828")
+	$Pointer1.color = Color("3C2828")
+	$Pointer2.color = Color("3C2828")
+	
+	match selected_option:
+		0:
+			$Pointer0.color = Color.yellow
+		1:
+			$Pointer1.color = Color.yellow
+		2:
+			$Pointer2.color = Color.yellow
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
