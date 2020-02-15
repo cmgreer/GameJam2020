@@ -61,7 +61,7 @@ __meta__ = {
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 355.0
-margin_bottom = 105.0
+margin_bottom = 85.0
 color = Color( 0.235294, 0.156863, 0.156863, 1 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -70,21 +70,22 @@ __meta__ = {
 
 [node name="Description" type="RichTextLabel" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
 margin_left = 4.0
-margin_top = 2.0
+margin_top = 5.0
 margin_right = 226.0
-margin_bottom = 38.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/normal_font = SubResource( 4 )
-tab_size = 8
 text = "I used to be the greatest HUNTER in all the land. But these days, I’m feeling a little lonely."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Choice0" type="RichTextLabel" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
-margin_top = 34.0
-margin_right = 125.0
-margin_bottom = 54.0
+margin_left = 25.0
+margin_top = 50.0
+margin_right = 132.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "Do you want to talk about it?"
 __meta__ = {
@@ -92,10 +93,11 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 112.0
-margin_top = 34.0
-margin_right = 219.0
-margin_bottom = 54.0
+margin_left = 190.0
+margin_top = 50.0
+margin_right = 297.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "Do I look like I care? Go suck an egg!"
 __meta__ = {
@@ -103,19 +105,21 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 14.0
-margin_top = 36.0
-margin_right = 16.0
-margin_bottom = 40.0
+margin_left = 18.0
+margin_top = 52.0
+margin_right = 20.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pointer1" type="ColorRect" parent="PopupPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 108.0
-margin_top = 36.0
-margin_right = 110.0
-margin_bottom = 40.0
+margin_left = 184.0
+margin_top = 52.0
+margin_right = 186.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

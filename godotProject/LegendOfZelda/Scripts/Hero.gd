@@ -18,8 +18,8 @@ func _ready():
 
 func _on_7UP_body_entered(body):
 	if(body.get_name() == "Player"):
-		pop.popup_centered(Vector2(360,110))
-		pop.set_position(globalSingleton.playerPosition+Vector2(-178, 60))
+		pop.popup_centered(Vector2(360,90))
+		pop.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
 	
 
 
