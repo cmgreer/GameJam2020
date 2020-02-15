@@ -7,6 +7,8 @@ var selected_option
 var selected_character
 signal status_character(charnum, status)
 
+signal dialogBoxCheck(boxNum)
+
 func change_selected_color():
 	$Pointer0.color = Color("3C2828")
 	$Pointer1.color = Color("3C2828")
@@ -31,13 +33,8 @@ func _input(event):
 				selected_option = 1
 			change_selected_color()
 		elif event.scancode == KEY_SPACE and just_pressed:
-			match selected_option:
-				0:
-					print("choice 0")
-					get_parent().get_parent().visible = false
-				1:
-					print("choice 1")
-					get_parent().get_parent().visible = false
+			get_parent().get_parent().visible = false
+			emit_signal("dialogBoxCheck",selected_option)
 
 
 func status_character(): #unfinished

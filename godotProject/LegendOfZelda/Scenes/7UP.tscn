@@ -26,7 +26,7 @@ font_data = ExtResource( 4 )
 size = 6
 font_data = ExtResource( 4 )
 
-[node name="7UP" type="Area2D"]
+[node name="Hunter" type="Area2D"]
 position = Vector2( 60, -150 )
 scale = Vector2( 0.2, 0.2 )
 collision_layer = 4
