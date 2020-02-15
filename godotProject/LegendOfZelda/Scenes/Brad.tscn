@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://LegendOfZelda/Scripts/Hero.gd" type="Script" id=1]
+[ext_resource path="res://LegendOfZelda/Scripts/Brad.gd" type="Script" id=1]
 [ext_resource path="res://LegendOfZelda/Assets/can-of-7up-picture-id531417466.jpg" type="Texture" id=2]
-[ext_resource path="res://LegendOfZelda/Scripts/DialogChoices.gd" type="Script" id=3]
+[ext_resource path="res://LegendOfZelda/Scripts/BradDialogChoices.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -26,7 +26,7 @@ font_data = ExtResource( 4 )
 size = 6
 font_data = ExtResource( 4 )
 
-[node name="7UP" type="Area2D"]
+[node name="Brad" type="Area2D"]
 position = Vector2( 60, -150 )
 scale = Vector2( 0.2, 0.2 )
 collision_layer = 4
@@ -41,7 +41,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 
-[node name="WitchL1" type="PopupPanel" parent="."]
+[node name="BradL1" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
 custom_styles/panel = SubResource( 3 )
@@ -49,7 +49,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBorder" type="ColorRect" parent="WitchL1"]
+[node name="ChoicesBorder" type="ColorRect" parent="BradL1"]
 margin_right = 8.0
 margin_bottom = 8.0
 color = Color( 0.160784, 0.105882, 0.105882, 1 )
@@ -57,7 +57,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBox" type="ColorRect" parent="WitchL1/ChoicesBorder"]
+[node name="ChoicesBox" type="ColorRect" parent="BradL1/ChoicesBorder"]
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 355.0
@@ -68,20 +68,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Description" type="RichTextLabel" parent="WitchL1/ChoicesBorder/ChoicesBox"]
+[node name="Description" type="RichTextLabel" parent="BradL1/ChoicesBorder/ChoicesBox"]
 margin_left = 4.0
 margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/normal_font = SubResource( 4 )
-text = "I used to be the greatest BARD in all the land. But these days, I’m feeling a little depressed.
-"
+text = "I used to be the greatest BARD in all the land. But these days, I’m feeling a little depressed."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice0" type="RichTextLabel" parent="WitchL1/ChoicesBorder/ChoicesBox"]
+[node name="Choice0" type="RichTextLabel" parent="BradL1/ChoicesBorder/ChoicesBox"]
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 132.0
@@ -93,7 +92,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice1" type="RichTextLabel" parent="WitchL1/ChoicesBorder/ChoicesBox"]
+[node name="Choice1" type="RichTextLabel" parent="BradL1/ChoicesBorder/ChoicesBox"]
 margin_left = 190.0
 margin_top = 50.0
 margin_right = 297.0
@@ -105,7 +104,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer0" type="ColorRect" parent="WitchL1/ChoicesBorder/ChoicesBox"]
+[node name="Pointer0" type="ColorRect" parent="BradL1/ChoicesBorder/ChoicesBox"]
 margin_left = 18.0
 margin_top = 52.0
 margin_right = 20.0
@@ -115,7 +114,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer1" type="ColorRect" parent="WitchL1/ChoicesBorder/ChoicesBox"]
+[node name="Pointer1" type="ColorRect" parent="BradL1/ChoicesBorder/ChoicesBox"]
 margin_left = 184.0
 margin_top = 52.0
 margin_right = 186.0
@@ -125,7 +124,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WitchL2" type="PopupPanel" parent="."]
+[node name="BradL2" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
 custom_styles/panel = SubResource( 3 )
@@ -133,7 +132,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBorder" type="ColorRect" parent="WitchL2"]
+[node name="ChoicesBorder" type="ColorRect" parent="BradL2"]
 margin_right = 8.0
 margin_bottom = 8.0
 color = Color( 0.160784, 0.105882, 0.105882, 1 )
@@ -141,7 +140,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBox" type="ColorRect" parent="WitchL2/ChoicesBorder"]
+[node name="ChoicesBox" type="ColorRect" parent="BradL2/ChoicesBorder"]
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 355.0
@@ -152,7 +151,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Description" type="RichTextLabel" parent="WitchL2/ChoicesBorder/ChoicesBox"]
+[node name="Description" type="RichTextLabel" parent="BradL2/ChoicesBorder/ChoicesBox"]
 margin_left = 4.0
 margin_top = 5.0
 margin_right = 226.0
@@ -164,7 +163,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice0" type="RichTextLabel" parent="WitchL2/ChoicesBorder/ChoicesBox"]
+[node name="Choice0" type="RichTextLabel" parent="BradL2/ChoicesBorder/ChoicesBox"]
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 132.0
@@ -176,20 +175,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice1" type="RichTextLabel" parent="WitchL2/ChoicesBorder/ChoicesBox"]
+[node name="Choice1" type="RichTextLabel" parent="BradL2/ChoicesBorder/ChoicesBox"]
 margin_left = 190.0
 margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
-text = "“What would inspire you?”
-"
+text = "“What would inspire you?”"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer0" type="ColorRect" parent="WitchL2/ChoicesBorder/ChoicesBox"]
+[node name="Pointer0" type="ColorRect" parent="BradL2/ChoicesBorder/ChoicesBox"]
 margin_left = 18.0
 margin_top = 52.0
 margin_right = 20.0
@@ -199,7 +197,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer1" type="ColorRect" parent="WitchL2/ChoicesBorder/ChoicesBox"]
+[node name="Pointer1" type="ColorRect" parent="BradL2/ChoicesBorder/ChoicesBox"]
 margin_left = 184.0
 margin_top = 52.0
 margin_right = 186.0
@@ -209,7 +207,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WitchL3" type="PopupPanel" parent="."]
+[node name="BradL3" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
 custom_styles/panel = SubResource( 3 )
@@ -217,7 +215,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBorder" type="ColorRect" parent="WitchL3"]
+[node name="ChoicesBorder" type="ColorRect" parent="BradL3"]
 margin_right = 8.0
 margin_bottom = 8.0
 color = Color( 0.160784, 0.105882, 0.105882, 1 )
@@ -225,7 +223,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoicesBox" type="ColorRect" parent="WitchL3/ChoicesBorder"]
+[node name="ChoicesBox" type="ColorRect" parent="BradL3/ChoicesBorder"]
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 355.0
@@ -236,7 +234,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Description" type="RichTextLabel" parent="WitchL3/ChoicesBorder/ChoicesBox"]
+[node name="Description" type="RichTextLabel" parent="BradL3/ChoicesBorder/ChoicesBox"]
 margin_left = 4.0
 margin_top = 5.0
 margin_right = 226.0
@@ -248,22 +246,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice0" type="RichTextLabel" parent="WitchL3/ChoicesBorder/ChoicesBox"]
+[node name="Choice0" type="RichTextLabel" parent="BradL3/ChoicesBorder/ChoicesBox"]
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 132.0
-margin_bottom = 70.0
-rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
-text = "“I would rather swallow a salad fork whole.”"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Choice1" type="RichTextLabel" parent="WitchL3/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
-margin_top = 50.0
-margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
@@ -272,7 +258,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer0" type="ColorRect" parent="WitchL3/ChoicesBorder/ChoicesBox"]
+[node name="Choice1" type="RichTextLabel" parent="BradL3/ChoicesBorder/ChoicesBox"]
+margin_left = 190.0
+margin_top = 50.0
+margin_right = 297.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_fonts/normal_font = SubResource( 5 )
+text = "“I would rather swallow a salad fork whole.”"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer0" type="ColorRect" parent="BradL3/ChoicesBorder/ChoicesBox"]
 margin_left = 18.0
 margin_top = 52.0
 margin_right = 20.0
@@ -282,7 +280,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer1" type="ColorRect" parent="WitchL3/ChoicesBorder/ChoicesBox"]
+[node name="Pointer1" type="ColorRect" parent="BradL3/ChoicesBorder/ChoicesBox"]
 margin_left = 184.0
 margin_top = 52.0
 margin_right = 186.0
@@ -292,9 +290,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="." to="." method="_on_7UP_body_entered"]
-[connection signal="about_to_show" from="WitchL1" to="." method="_on_PopupPanel_about_to_show"]
-[connection signal="popup_hide" from="WitchL1" to="." method="_on_PopupPanel_popup_hide"]
-[connection signal="about_to_show" from="WitchL2" to="." method="_on_PopupPanel_about_to_show"]
-[connection signal="popup_hide" from="WitchL2" to="." method="_on_PopupPanel_popup_hide"]
-[connection signal="about_to_show" from="WitchL3" to="." method="_on_PopupPanel_about_to_show"]
-[connection signal="popup_hide" from="WitchL3" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="BradL1" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="popup_hide" from="BradL1" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="dialogBoxCheck" from="BradL1/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="BradL2" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="popup_hide" from="BradL2" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="BradL3" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="popup_hide" from="BradL3" to="." method="_on_PopupPanel_popup_hide"]
