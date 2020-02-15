@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://LegendOfZelda/Scenes/Hero.gd" type="Script" id=1]
+[ext_resource path="res://LegendOfZelda/Assets/can-of-7up-picture-id531417466.jpg" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 1, 2, 64, 1, 3, 57 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="7UP" type="Area2D"]
+position = Vector2( 60, -150 )
+scale = Vector2( 0.2, 0.2 )
+collision_layer = 4
+collision_mask = 5
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 30, 30 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+visible = true
+margin_right = 50.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 50, 30 )
+popup_exclusive = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="." to="." method="_on_7UP_body_entered"]
