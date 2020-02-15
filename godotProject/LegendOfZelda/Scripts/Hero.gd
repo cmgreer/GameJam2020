@@ -18,7 +18,15 @@ func _ready():
 
 func _on_7UP_body_entered(body):
 	if(body.get_name() == "Player"):
-		pop.popup_centered(Vector2(200,200))
+		pop.popup_centered(Vector2(249,74))
 		pop.set_position(get_position()+Vector2(-50, -20))
 	
 
+
+
+func _on_PopupPanel_about_to_show():
+	globalSingleton.player_frozen = true
+
+
+func _on_PopupPanel_popup_hide():
+	globalSingleton.player_frozen = false

@@ -5,19 +5,19 @@
 [ext_resource path="res://OregonTrail/portraits/player.png" type="Texture" id=3]
 [ext_resource path="res://OregonTrail/Scenes/CharacterBox.gd" type="Script" id=4]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 13
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=2]
 size = 6
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 8
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 6
 font_data = ExtResource( 1 )
 
@@ -68,7 +68,7 @@ margin_top = -87.5
 margin_right = -653.5
 margin_bottom = -68.5
 rect_scale = Vector2( 11.111, 11.111 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.2, 0.282353, 0.819608, 1 )
 text = "Player 1"
 __meta__ = {
@@ -86,7 +86,7 @@ margin_top = -62.5
 margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "Hunter"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -114,7 +114,7 @@ margin_top = -62.5
 margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "Witch"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -142,7 +142,7 @@ margin_top = -62.5
 margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "Dwarf"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -170,7 +170,7 @@ margin_top = -62.5
 margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "Brad"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -198,7 +198,7 @@ margin_top = -62.5
 margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "Cobbler"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -226,7 +226,7 @@ margin_top = -62.5
 margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "Woodsman"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -268,7 +268,7 @@ margin_left = 4.0
 margin_top = 2.0
 margin_right = 226.0
 margin_bottom = 38.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -278,7 +278,7 @@ margin_left = 18.0
 margin_top = 39.0
 margin_right = 70.0
 margin_bottom = 50.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "Try and Fight it!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -289,7 +289,7 @@ margin_left = 94.0
 margin_top = 39.0
 margin_right = 146.0
 margin_bottom = 50.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "Run Away!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -300,7 +300,7 @@ margin_left = 154.0
 margin_top = 39.0
 margin_right = 206.0
 margin_bottom = 50.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "Intimidate it"
 __meta__ = {
 "_edit_use_anchors_": false

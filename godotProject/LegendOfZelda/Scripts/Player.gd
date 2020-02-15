@@ -18,5 +18,6 @@ func get_input():
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
-	get_input()
-	move_and_collide(velocity * delta)
+	if(not globalSingleton.player_frozen):
+		get_input()
+		move_and_collide(velocity * delta)

@@ -24,7 +24,7 @@ default_bus_layout=""
 
 [autoload]
 
-root="*res://Global.gd"
+globalSingleton="*res://Global.gd"
 
 [display]
 
