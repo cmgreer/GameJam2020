@@ -21,3 +21,4 @@ func _physics_process(delta):
 	if(not globalSingleton.player_frozen):
 		get_input()
 		move_and_collide(velocity * delta)
+		globalSingleton.playerPosition = get_position()
