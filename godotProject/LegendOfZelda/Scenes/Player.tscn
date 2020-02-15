@@ -5,7 +5,6 @@
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://LegendOfZelda/Scripts/Camera2D.gd" type="Script" id=4]
 
-
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
@@ -42,6 +41,7 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
+frame = 3
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -53,10 +53,10 @@ scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 6 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-margin_left = 213.972
-margin_top = -176.662
-margin_right = 313.972
-margin_bottom = -76.6616
+margin_left = 464.065
+margin_top = -289.302
+margin_right = 564.065
+margin_bottom = -189.301
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -71,4 +71,4 @@ current = true
 zoom = Vector2( 10, 10 )
 script = ExtResource( 4 )
 
-[node name="Node" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
+[node name="Background" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
