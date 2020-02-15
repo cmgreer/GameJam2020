@@ -44,7 +44,8 @@ func _input(event):
 
 func status_character(): #unfinished
 	for i in range(1,7):
-		emit_signal("status_character", i, global.)
+		#emit_signal("status_character", i, global.)
+		pass
 	
 	match selected_character:
 		0:
