@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://LegendOfZelda/Assets/player_blink.png" type="Texture" id=1]
 [ext_resource path="res://TestWorld/Play.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://LegendOfZelda/Assets/player_walk_Sideways.png" type="Texture" id=5]
 [ext_resource path="res://LegendOfZelda/Assets/player_walk.png" type="Texture" id=6]
 [ext_resource path="res://LegendOfZelda/Assets/player_Walk_Back.png" type="Texture" id=7]
+[ext_resource path="res://TestWorld/grey.png" type="Texture" id=8]
+[ext_resource path="res://TestWorld/Circle.png" type="Texture" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -193,16 +195,16 @@ playing = true
 
 [node name="WalkingLeft" type="AnimatedSprite" parent="."]
 visible = false
-rotation = 3.14159
+rotation = -3.14159
 scale = Vector2( 1, -1 )
 frames = SubResource( 14 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="WalkingRight" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 14 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="WalkingBackward" type="AnimatedSprite" parent="."]
@@ -247,3 +249,23 @@ zoom = Vector2( 10, 10 )
 script = ExtResource( 3 )
 
 [node name="Background" parent="ViewportContainer/Viewport" instance=ExtResource( 4 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite"]
+margin_left = -97.0
+margin_top = -48.0
+margin_right = -20.0
+margin_bottom = -33.0
+rect_scale = Vector2( 0.5, 0.5 )
+text = "Inventory:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemContainer" type="Sprite" parent="Sprite"]
+position = Vector2( -92, -35 )
+scale = Vector2( 0.016, 0.016 )
+texture = ExtResource( 10 )
