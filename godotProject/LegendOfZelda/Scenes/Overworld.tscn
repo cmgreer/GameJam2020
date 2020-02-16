@@ -92,11 +92,6 @@ position = Vector2( -213.888, 661.521 )
 [node name="Woodsman" parent="." instance=ExtResource( 6 )]
 position = Vector2( -202.637, -28.4812 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, 1493.96 )
-scale = Vector2( 0.5, 0.5 )
-speed = 300
-
 [node name="Boat" type="Area2D" parent="."]
 position = Vector2( -370, 1550 )
 
@@ -190,6 +185,11 @@ rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 1493.96 )
+scale = Vector2( 0.5, 0.5 )
+speed = 300
 [connection signal="body_entered" from="Boat" to="Boat" method="_on_Boat_body_entered"]
 [connection signal="about_to_show" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_about_to_show"]
 [connection signal="popup_hide" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_popup_hide"]

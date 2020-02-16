@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://OregonTrail/Scripts/PointerInjury.gd" type="Script" id=2]
+[ext_resource path="res://OregonTrail/Entities/sceneLandscapes/Injury.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 8
@@ -78,3 +79,7 @@ margin_bottom = 149.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Injury" type="Sprite" parent="."]
+position = Vector2( 198, 90 )
+texture = ExtResource( 3 )

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://OregonTrail/Scripts/ChoicesBox2.gd" type="Script" id=2]
 [ext_resource path="res://OregonTrail/portraits/player.png" type="Texture" id=3]
 [ext_resource path="res://OregonTrail/Scripts/CharacterBox.gd" type="Script" id=4]
+[ext_resource path="res://OregonTrail/Entities/sceneLandscapes/2to1/Beary_Bear_2600x1300.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 13
@@ -39,6 +40,11 @@ margin_bottom = 115.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Beary_Bear_2600x1300" type="Sprite" parent="Panel/Art"]
+position = Vector2( 115.8, 56.9 )
+scale = Vector2( 0.0909231, 0.0909231 )
+texture = ExtResource( 5 )
 
 [node name="CharacterBorder" type="ColorRect" parent="Panel"]
 margin_left = 234.0

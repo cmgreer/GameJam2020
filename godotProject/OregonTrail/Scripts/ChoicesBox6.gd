@@ -7,6 +7,7 @@ var selected_option
 var someoneInjured = 0
 var popoutText
 var chosen = 0
+var changed = 0
 onready var popupPan = get_parent().get_parent().get_child(3)#getting popup panel
 
 
@@ -27,32 +28,48 @@ func setPopout(text):#called when popup before next scene
 	popupPan.get_child(0).add_text(text)
 
 func choice0(): #Climb Over
-	if globalSingleton.character_status[6]>0: #if tinker is in party
-		setPopout("The Tinker springs into action, rigging up a rudimentary pump. The BOAT is emptied of water and you make it safely to the other side.")
-	else:
-		for i in range(6,-1,-1): #kill first healthy character
+	for i in range (6,0,-1): #if have injury death
+		if globalSingleton.character_status[i]==1:
+			change_status(i,0)
+			popoutText = "You attempt to clamber over the ROCKSLIDE. Due to their injury, " + globalSingleton.character_name[i] + " falls between the rocks and is killed."
+			changed = 1
+			break
+	if changed == 0:
+		for i in range(6,-1,-1): #injure first healthy character
 			print (i, globalSingleton.character_status[i])
 			if globalSingleton.character_status[i]==2: #find first unlocked character
-				change_status(i,0) #dead character
-				popoutText = "You and your PACK attempt to bail out the BOAT. However, you cannot bail quickly enough, and just before you reach the shore, the BOAT sinks, taking " + globalSingleton.character_name[i] + " with it."
+				change_status(i,1) #injured character
+				popoutText = "You attempt to clamber over the ROCKSLIDE. In the process, " + globalSingleton.character_name[i] + " falls and is injured."
 				break
-		setPopout(popoutText)
+	setPopout(popoutText)
 
-func choice1(): #paddle faster
-	for i in range(6,-1,-1): #injure first health character from bottom up
-		if globalSingleton.character_status[i]==2: #find first unlocked character
-			change_status(i,1) #injured character
-			popoutText = "You all attempt to paddle faster. You make it to the other side, but " + globalSingleton.character_name[i] + " overexerts themselves, incurring an injury."
-			break
+func choice1(): #go long way around
+	if globalSingleton.run_beast==1:
+		for i in range(6,-1,-1): #kill first health character from bottom up
+			if globalSingleton.character_status[i]>0: #find first unlocked character
+				change_status(i,0) #injured character
+				popoutText = "You attempt to navigate around the ROCKSLIDE. However, it is slow going, and the TERRIBLE BEAST catches up with you and kills " + globalSingleton.character_name[i] + "."
+				break
+	else:
+		popoutText = "You attempt to navigate around the ROCKSLIDE. It takes a little longer, but otherwise you’re fine."
 	setPopout(popoutText)
 
 
-func choice2(): #swim the rest
-	for i in range(6,-1,-1): #injure first health character from bottom up
-		if globalSingleton.character_status[i]==2: #find first unlocked character
-			change_status(i,1) #injured character
-			popoutText = "You all abandon the boat and attempt to swim for the other side. You all make it, but along the way " + globalSingleton.character_name[i] + " bangs against the rocks and injures themselves."
-			break
+func choice2(): #move the rocks
+	if globalSingleton.character_status[3]==2: #miner is healthy
+		popoutText = "Using their expertise in stonecunning, the stout MINER chips away just enough of the rocks to clear a path. You make it through without incident."
+	elif globalSingleton.run_beast==1:
+		for i in range(6,-1,-1): #kill first health character from bottom up
+			if globalSingleton.character_status[i]>0: #find first unlocked character
+				change_status(i,0) #kill character
+				popoutText = "In a great feat of strength, the " + globalSingleton.character_name[i] + " shoves the rocks aside. However, the TERRIBLE BEAST catches up with you and rends them asunder!"
+				break
+	else:
+		for i in range(6,-1,-1): #injure first health character from bottom up
+			if globalSingleton.character_status[i]==2: #find first unlocked character
+				change_status(i,0) #kill character
+				popoutText = "In a great feat of strength, the " + globalSingleton.character_name[i] + " shoves the rocks aside. However, they overexert themselves, earning an injury."
+				break
 	setPopout(popoutText)
 		
 

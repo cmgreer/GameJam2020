@@ -69,6 +69,7 @@ func choice3(): #Flee through the cave
 		if globalSingleton.character_status[i]==2: #find first unlocked character
 			change_status(i,1) #injured character
 			popoutText = "You flee from the TERRIBLE BEAST, running wildly through the DARK CAVE! In the darkness, " + globalSingleton.character_name[i] + " badly injures themselves."
+			globalSingleton.run_beast = 1
 			break
 	setPopout(popoutText)
 		
