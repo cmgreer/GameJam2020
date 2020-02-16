@@ -283,7 +283,7 @@ margin_top = 2.0
 margin_right = 226.0
 margin_bottom = 38.0
 custom_fonts/normal_font = SubResource( 3 )
-text = "You’re walking through the woods, peacefully minding your own business when a TERRIBLE BEAST bursts forth from the underbrush!"
+text = "As you set out on your journey, your BOAT springs a leak! It begins to take on water."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -294,7 +294,7 @@ margin_top = 39.0
 margin_right = 70.0
 margin_bottom = 50.0
 custom_fonts/normal_font = SubResource( 4 )
-text = "Try and Fight it!"
+text = "Bail out the boat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -305,7 +305,7 @@ margin_top = 39.0
 margin_right = 146.0
 margin_bottom = 50.0
 custom_fonts/normal_font = SubResource( 4 )
-text = "Run Away!"
+text = "Paddle faster"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -313,10 +313,10 @@ __meta__ = {
 [node name="Choice2" type="RichTextLabel" parent="Panel/ChoicesBorder/ChoicesBox"]
 margin_left = 154.0
 margin_top = 39.0
-margin_right = 206.0
+margin_right = 232.0
 margin_bottom = 50.0
 custom_fonts/normal_font = SubResource( 4 )
-text = "Intimidate it"
+text = "Swim the rest of the way"
 __meta__ = {
 "_edit_use_anchors_": false
 }
