@@ -67,7 +67,16 @@ func get_input():
 			globalSingleton.player_frozen -=1
 		else:
 			globalSingleton.player_frozen +=1
-			
+	if Input.is_action_just_pressed('ui_accept'):
+		if(globalSingleton.interactingAccept != null):
+			globalSingleton.interactingAccept.call_func()
+		pass
+	if Input.is_action_just_pressed('ui_right'):
+		if(globalSingleton.interactingRight != null):
+			globalSingleton.interactingRight.call_func()
+	if Input.is_action_just_pressed('ui_left'):
+		if(globalSingleton.interactingLeft != null):
+			globalSingleton.interactingLeft.call_func()
 	
 	velocity = velocity.normalized() * speed
 

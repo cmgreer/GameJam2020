@@ -12,10 +12,10 @@ onready var popJoin = get_child(6)
 
 var dialogLevel = 0
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -28,6 +28,7 @@ func _on_7UP_body_entered(body):
 			dialogLevel = 1
 			popL1.popup_centered(Vector2(360,90))
 			popL1.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
+		
 	
 
 
@@ -97,6 +98,7 @@ func _on_RejectPanel_about_to_show():
 
 func _on_RejectPanel_popup_hide():
 	globalSingleton.player_frozen +=1
+	
 
 
 func _on_JoinTeamPanel_about_to_show():
@@ -104,3 +106,7 @@ func _on_JoinTeamPanel_about_to_show():
 
 func _on_JoinTeamPanel_about_to_hide():
 	globalSingleton.player_frozen +=1
+
+
+func on_show():
+	pass
