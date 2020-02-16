@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://OregonTrail/Scripts/PointerInjury.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 8
@@ -33,6 +34,7 @@ margin_top = 5.0
 margin_right = 76.0
 margin_bottom = 175.0
 color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
