@@ -10,7 +10,7 @@ func _input(event):
 		var just_pressed = event.pressed and not event.echo
 		
 		if event.scancode == KEY_SPACE and just_pressed:
-			get_tree().change_scene("res://OregonTrail/Scenes/1.tscn")
+			get_tree().change_scene("res://LegendOfZelda/Scenes/Overworld.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
