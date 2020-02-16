@@ -5,7 +5,6 @@ extends ColorRect
 # var b = "text"
 var selected_option
 var selected_character
-signal status_character(charnum, status)
 
 func change_selected_color():
 	$Pointer0.color = Color("3C2828")
@@ -40,10 +39,6 @@ func _input(event):
 					get_parent().get_parent().visible = false
 
 
-func status_character(): #unfinished
-	for i in range(1,7):
-		#emit_signal("status_character", i, global.)
-		pass
 	
 	match selected_character:
 		0:

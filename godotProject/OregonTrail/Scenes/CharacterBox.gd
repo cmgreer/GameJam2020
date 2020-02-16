@@ -4,14 +4,14 @@ extends ColorRect
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var status
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var player_vars = get_node("/root/root")
-	connect("status_character", get_parent().get_parent().get_child(2).get_child(0), "color_status")
+	connect("char_status_change", get_parent().get_parent().get_child(2).get_child(0), "color_status")
 
-func color_status(charNum, status):
+func color_status(charNum):
+	status = globalSingleton.character_status[charNum]
 	if status == 0:
 		get_child(charNum).get_child(1).color = Color.gray
 	elif status == 1:
