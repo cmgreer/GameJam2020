@@ -4,7 +4,7 @@ extends ColorRect
 # var a = 2
 # var b = "text"
 var selected_option
-signal char_status_change(charNum)
+
 
 func change_selected_color():
 	$Pointer0.color = Color("3C2828")
@@ -43,7 +43,6 @@ func _input(event):
 
 func change_character_status(characterNum, status): #unfinished
 	globalSingleton.character_status[characterNum] = status
-	emit_signal("char_status_change", characterNum)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
