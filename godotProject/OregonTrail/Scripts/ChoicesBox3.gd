@@ -30,6 +30,7 @@ func setPopout(text):#called when popup before next scene
 	popupPan.get_child(0).add_text(text)
 
 func choice0(): #force way through
+	popoutText = "The brave Player attempts to force their way through the THICK FOLIAGE. They clear a path for the rest of you, but injure themselves in the process."
 	if globalSingleton.character_status[5]>0: #if hunter is healthy
 		setPopout("The mighty WOODMAN hacks their way through the THICK FOLIAGE, clearing the way for the rest of you. You continue on your way.")
 	else:

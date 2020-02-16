@@ -1,14 +1,12 @@
 <<<<<<< HEAD
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=22 format=2]
 =======
-[gd_scene load_steps=19 format=2]
->>>>>>> 3dadfc5ff0f7796a6008881e92a2d0bbe9fce765
+[gd_scene load_steps=27 format=2]
+>>>>>>> 19c28eaa536281a2c1bc6d39a912dc4bdb8941f9
 
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://LegendOfZelda/Scenes/7UP.tscn" type="PackedScene" id=3]
-<<<<<<< HEAD
-=======
 [ext_resource path="res://LegendOfZelda/Scenes/Brad.tscn" type="PackedScene" id=4]
 [ext_resource path="res://LegendOfZelda/Scenes/Witch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://LegendOfZelda/Scenes/Woodsman.tscn" type="PackedScene" id=6]
@@ -16,7 +14,18 @@
 [ext_resource path="res://LegendOfZelda/Scenes/BradBard.tscn" type="PackedScene" id=8]
 [ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=9]
 [ext_resource path="res://LegendOfZelda/Assets/sanic.jpg" type="Texture" id=10]
+[ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=11]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://LegendOfZelda/Scripts/OptionalBoatLauncher.gd" type="Script" id=13]
+[ext_resource path="res://LegendOfZelda/Scripts/Boat.gd" type="Script" id=14]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://LegendOfZelda/Scenes/GearSilver.tscn" type="PackedScene" id=15]
+[ext_resource path="res://LegendOfZelda/Scenes/GearGold.tscn" type="PackedScene" id=16]
+[ext_resource path="res://LegendOfZelda/Scenes/GearBronze.tscn" type="PackedScene" id=17]
+[ext_resource path="res://LegendOfZelda/Scenes/Gem.tscn" type="PackedScene" id=18]
+[ext_resource path="res://LegendOfZelda/Scenes/Whetstone.tscn" type="PackedScene" id=19]
+>>>>>>> 19c28eaa536281a2c1bc6d39a912dc4bdb8941f9
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -57,7 +66,6 @@ font_data = ExtResource( 12 )
 [sub_resource type="DynamicFont" id=7]
 size = 6
 font_data = ExtResource( 12 )
->>>>>>> 3dadfc5ff0f7796a6008881e92a2d0bbe9fce765
 
 [node name="Map" type="Node"]
 __meta__ = {
@@ -66,8 +74,6 @@ __meta__ = {
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 
-<<<<<<< HEAD
-=======
 [node name="Brad" parent="." instance=ExtResource( 4 )]
 position = Vector2( -213.888, 1033.47 )
 
@@ -93,6 +99,9 @@ anims/path = SubResource( 2 )
 position = Vector2( 0, -0.000244141 )
 rotation = 8.64267e-06
 
+[node name="Broom" parent="Path2D/PathFollow2D/BradBard" instance=ExtResource( 11 )]
+position = Vector2( -468.819, 211.999 )
+
 [node name="Witch" parent="." instance=ExtResource( 5 )]
 position = Vector2( -213.888, 661.521 )
 
@@ -103,6 +112,7 @@ position = Vector2( -202.637, -28.4812 )
 
 [node name="Boat" type="Area2D" parent="."]
 position = Vector2( -370, 1550 )
+script = ExtResource( 14 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boat"]
 position = Vector2( -40, 0 )
@@ -136,6 +146,7 @@ margin_top = 5.0
 margin_right = 355.0
 margin_bottom = 85.0
 color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -158,7 +169,11 @@ margin_right = 157.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 7 )
+<<<<<<< HEAD
+text = "No"
+=======
 text = "Yes"
+>>>>>>> 19c28eaa536281a2c1bc6d39a912dc4bdb8941f9
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -170,7 +185,11 @@ margin_right = 332.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 7 )
+<<<<<<< HEAD
+text = "Yes"
+=======
 text = "No"
+>>>>>>> 19c28eaa536281a2c1bc6d39a912dc4bdb8941f9
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -195,11 +214,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
->>>>>>> 3dadfc5ff0f7796a6008881e92a2d0bbe9fce765
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, 1493.96 )
 scale = Vector2( 0.5, 0.5 )
 speed = 300
+<<<<<<< HEAD
+[connection signal="body_entered" from="Boat" to="Boat" method="_on_Boat_body_entered"]
+[connection signal="about_to_show" from="Boat/MessageBox" to="Boat/MessageBox/ChoicesBorder/ChoicesBox" method="onShow"]
+[connection signal="about_to_show" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_about_to_show"]
+=======
 
-[node name="7UP" parent="." instance=ExtResource( 3 )]
-position = Vector2( 458.804, 1493.96 )
+[node name="GearSilver" parent="." instance=ExtResource( 15 )]
+position = Vector2( -2560, -256 )
+
+[node name="GearGold" parent="." instance=ExtResource( 16 )]
+position = Vector2( -4096, -800 )
+
+[node name="GearBronze" parent="." instance=ExtResource( 17 )]
+position = Vector2( -4500, 1450 )
+
+[node name="Whetstone" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1002.4, -479.105 )
+
+[node name="Gem" parent="." instance=ExtResource( 18 )]
+position = Vector2( 211.75, 656.618 )
+[connection signal="body_entered" from="Boat" to="Boat" method="_on_Boat_body_entered"]
+[connection signal="about_to_show" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_about_to_show"]
+[connection signal="about_to_show" from="Boat/MessageBox" to="Boat/MessageBox/ChoicesBorder/ChoicesBox" method="onShow"]
+>>>>>>> 19c28eaa536281a2c1bc6d39a912dc4bdb8941f9
+[connection signal="popup_hide" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_popup_hide"]

@@ -28,6 +28,7 @@ func setPopout(text):#called when popup before next scene
 	popupPan.get_child(0).add_text(text)
 
 func choice0(): #Climb Over
+	popoutText = "You attempt to clamber over the ROCKSLIDE. In the process, Player falls and is injured."
 	for i in range (6,0,-1): #if have injury death
 		if globalSingleton.character_status[i]==1:
 			change_status(i,0)
@@ -56,6 +57,7 @@ func choice1(): #go long way around
 
 
 func choice2(): #move the rocks
+	popoutText = "In a great feat of strength, the Player shoves the rocks aside. However, they overexert themselves, earning an injury."
 	if globalSingleton.character_status[3]==2: #miner is healthy
 		popoutText = "Using their expertise in stonecunning, the stout MINER chips away just enough of the rocks to clear a path. You make it through without incident."
 	elif globalSingleton.run_beast==1:

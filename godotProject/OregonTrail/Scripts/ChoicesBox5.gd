@@ -28,6 +28,7 @@ func setPopout(text):#called when popup before next scene
 	popupPan.get_child(0).add_text(text) 
 
 func choice0(): #feel way through
+	popoutText = "The brave Player attempts to lead the way, feeling their way along the DARK CAVE. However, in the darkness, some unseen creature bites them, injuring them badly."
 	for i in range(6,-1,-1): #injure first healthy character
 		if globalSingleton.character_status[i]==2: #find first unlocked character
 			change_status(i,1) #injure character

@@ -20,7 +20,7 @@ var player_frozen = 0
 var currrent_quests=[]
 var Items_collected = []
 var item_dictionary = {"Broom":false, "Gem":false,
-"Bunny":false, "Gear":0, "Stone":false}
+"Bunny":false, "Gears":0, "Stone":false}
 var items_amount = 5
 
 	
