@@ -25,7 +25,7 @@ func change_scene(): #Unfinished
 func setPopout(text):#called when popup before next scene
 	popupPan.popup_centered(Vector2(300,160))
 	popupPan.set_position(Vector2(10,10))
-	popupPan.get_child(0).add_text(text)
+	popupPan.get_child(0).add_text(text) 
 
 func choice0(): #feel way through
 	for i in range(6,-1,-1): #injure first healthy character
