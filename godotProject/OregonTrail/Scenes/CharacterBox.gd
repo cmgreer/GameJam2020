@@ -12,7 +12,7 @@ func color_status():
 		if status == 0: #dead/not unlocked
 			get_child(i).get_child(1).color = Color(0.235, 0.156, 0.156, 0.7)
 		elif status == 1: #injured
-			get_child(i).get_child(1).color = Color(0.7, 0.188, 0.188, 0.3)
+			get_child(i).get_child(1).color = Color(0.7, 0.188, 0.188, 0.2)
 		elif status ==2: #healthy
 			get_child(i).get_child(1).color = Color(0,0,0,0)
 

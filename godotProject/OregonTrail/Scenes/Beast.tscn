@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://OregonTrail/Scenes/ChoicesBox.gd" type="Script" id=2]
@@ -19,6 +19,9 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 1 )
 
 [node name="Beast" type="Node2D"]
@@ -63,9 +66,9 @@ scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 3 )
 
 [node name="PlayerText" type="RichTextLabel" parent="Panel/CharacterBorder/CharacterBox/Player"]
-margin_left = -712.5
+margin_left = -737.5
 margin_top = -87.5
-margin_right = -653.5
+margin_right = -678.5
 margin_bottom = -68.5
 rect_scale = Vector2( 11.111, 11.111 )
 custom_fonts/normal_font = SubResource( 1 )
@@ -95,7 +98,7 @@ __meta__ = {
 [node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character"]
 margin_left = -125.0
 margin_top = -125.0
-margin_right = -105.0
+margin_right = -53.0
 margin_bottom = -105.0
 rect_scale = Vector2( 12.5, 12.5 )
 color = Color( 1, 1, 1, 0 )
@@ -123,7 +126,7 @@ __meta__ = {
 [node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character2"]
 margin_left = -125.0
 margin_top = -125.0
-margin_right = -105.0
+margin_right = -53.0
 margin_bottom = -105.0
 rect_scale = Vector2( 12.5, 12.5 )
 color = Color( 1, 1, 1, 0 )
@@ -151,7 +154,7 @@ __meta__ = {
 [node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character3"]
 margin_left = -125.0
 margin_top = -125.0
-margin_right = -105.0
+margin_right = -53.0
 margin_bottom = -105.0
 rect_scale = Vector2( 12.5, 12.5 )
 color = Color( 1, 1, 1, 0 )
@@ -179,7 +182,7 @@ __meta__ = {
 [node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character4"]
 margin_left = -125.0
 margin_top = -125.0
-margin_right = -105.0
+margin_right = -53.0
 margin_bottom = -105.0
 rect_scale = Vector2( 12.5, 12.5 )
 color = Color( 1, 1, 1, 0 )
@@ -199,7 +202,7 @@ margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
 custom_fonts/normal_font = SubResource( 2 )
-text = "Cobbler"
+text = "Woodsman"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -207,7 +210,7 @@ __meta__ = {
 [node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character5"]
 margin_left = -125.0
 margin_top = -125.0
-margin_right = -105.0
+margin_right = -53.0
 margin_bottom = -105.0
 rect_scale = Vector2( 12.5, 12.5 )
 color = Color( 1, 1, 1, 0 )
@@ -227,7 +230,7 @@ margin_right = 210.5
 margin_bottom = -52.5
 rect_scale = Vector2( 12.5, 12.5 )
 custom_fonts/normal_font = SubResource( 2 )
-text = "Woodsman"
+text = "Tinker"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -235,7 +238,7 @@ __meta__ = {
 [node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character6"]
 margin_left = -125.0
 margin_top = -125.0
-margin_right = -105.0
+margin_right = -53.0
 margin_bottom = -105.0
 rect_scale = Vector2( 12.5, 12.5 )
 color = Color( 1, 1, 1, 0 )
@@ -269,6 +272,7 @@ margin_top = 2.0
 margin_right = 226.0
 margin_bottom = 38.0
 custom_fonts/normal_font = SubResource( 3 )
+text = "You’re walking through the woods, peacefully minding your own business when a TERRIBLE BEAST bursts forth from the underbrush!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -332,3 +336,20 @@ margin_bottom = 45.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PopupPanel" type="PopupPanel" parent="Panel"]
+visible = true
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 310.0
+margin_bottom = 170.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/PopupPanel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 290.0
+margin_bottom = 150.0
+custom_fonts/normal_font = SubResource( 5 )
