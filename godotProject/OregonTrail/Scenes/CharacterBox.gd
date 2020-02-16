@@ -4,20 +4,23 @@ extends ColorRect
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var status
 
+func color_status():
+	for i in range(1,7):
+		status = globalSingleton.character_status[i]
+		if status == 0: #dead/not unlocked
+			get_child(i).get_child(1).color = Color(0.235, 0.156, 0.156, 0.7)
+		elif status == 1: #injured
+			get_child(i).get_child(1).color = Color(0.7, 0.188, 0.188, 0.3)
+		elif status ==2: #healthy
+			get_child(i).get_child(1).color = Color(0,0,0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var player_vars = get_node("/root/root")
-	connect("status_character", get_parent().get_parent().get_child(2).get_child(0), "color_status")
+	color_status()
 
-func color_status(charNum, status):
-	if status == 0:
-		get_child(charNum).get_child(1).color = Color.gray
-	elif status == 1:
-		get_child(charNum).get_child(1).color = Color.red
-	elif status ==2:
-		get_child(charNum).get_child(1).color = Color(0,0,0,0)
+
 		
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
