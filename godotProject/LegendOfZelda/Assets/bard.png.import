@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/witch.png-575be3cff0e2173a9820c570825795de.stex"
+path="res://.import/bard.png-45c248bd3059cacbb8f17175af0229c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://witch.png"
-dest_files=[ "res://.import/witch.png-575be3cff0e2173a9820c570825795de.stex" ]
+source_file="res://LegendOfZelda/Assets/bard.png"
+dest_files=[ "res://.import/bard.png-45c248bd3059cacbb8f17175af0229c9.stex" ]
 
 [params]
 

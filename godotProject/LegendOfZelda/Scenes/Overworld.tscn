@@ -5,7 +5,7 @@
 [ext_resource path="res://LegendOfZelda/Scenes/7UP.tscn" type="PackedScene" id=3]
 [ext_resource path="res://LegendOfZelda/Scenes/Brad.tscn" type="PackedScene" id=4]
 [ext_resource path="res://LegendOfZelda/Scenes/Witch.tscn" type="PackedScene" id=5]
-[ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=6]
+[ext_resource path="res://LegendOfZelda/Scenes/Woodsman.tscn" type="PackedScene" id=6]
 [ext_resource path="res://LegendOfZelda/Scenes/Dwarf.tscn" type="PackedScene" id=7]
 [ext_resource path="res://LegendOfZelda/Scenes/BradBard.tscn" type="PackedScene" id=8]
 [ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=9]
@@ -66,18 +66,11 @@ position = Vector2( 458.804, 1493.96 )
 [node name="Brad" parent="." instance=ExtResource( 4 )]
 position = Vector2( -213.888, 1033.47 )
 
-[node name="Broom" parent="." instance=ExtResource( 6 )]
-position = Vector2( 212.16, 59.6429 )
-
 [node name="Dwarf" parent="." instance=ExtResource( 7 )]
 position = Vector2( 131.008, 627.707 )
 
 [node name="7UP" parent="." instance=ExtResource( 3 )]
 position = Vector2( 458.804, 1493.96 )
-
-[node name="Broom" parent="." instance=ExtResource( 4 )]
-position = Vector2( -2878.37, -45.1789 )
-scale = Vector2( 1, 1 )
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( -0.000198364, -0.000141144 )
@@ -99,3 +92,6 @@ rotation = 8.64267e-06
 position = Vector2( -213.888, 661.521 )
 
 [node name="Tinker" parent="." instance=ExtResource( 9 )]
+
+[node name="Woodsman" parent="." instance=ExtResource( 6 )]
+position = Vector2( -202.637, -28.4812 )

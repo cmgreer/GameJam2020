@@ -7,7 +7,8 @@ extends Area2D
 onready var popL1 = get_child(2)
 onready var popL2 = get_child(3)
 onready var popL3 = get_child(4)
-
+onready var popReject = get_child(5)
+onready var popJoin = get_child(6)
 
 var dialogLevel = 0
 
@@ -73,12 +74,18 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 					backout()
 
 func backout():
-	#hero doesn't join party
-	pass
+	dialogLevel = 10
+	popReject.popup_centered(Vector2(360,90))
+	popReject.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
+	globalSingleton.character_status[1] = 0
+	globalSingleton.player_frozen = true
 
 func join_team():
-	#hero joins the team
-	pass
+	dialogLevel = 10
+	popJoin.popup_centered(Vector2(360,90))
+	popJoin.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
+	globalSingleton.character_status[1] = 2
+	globalSingleton.player_frozen = true
 	
 func launch_quest():
 	pass

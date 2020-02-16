@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scripts/TinkerDialogChoices.gd" type="Script" id=1]
 [ext_resource path="res://LegendOfZelda/Assets/can-of-7up-picture-id531417466.jpg" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/Tinker.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 7 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
@@ -16,14 +17,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="DynamicFont" id=8]
+size = 8
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 6
+font_data = ExtResource( 4 )
+
 [sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="DynamicFont" id=4]
 size = 8
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 6
 font_data = ExtResource( 4 )
 
 [node name="Tinker" type="Area2D"]
@@ -36,15 +43,15 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 115 )
 scale = Vector2( 40, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+frames = SubResource( 6 )
 
 [node name="TinkerL1" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -74,7 +81,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "I used to be the greatest TINKER in all the land. But these days, I’m feeling kind of sad."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -86,7 +93,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“What’s making you sad?”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -98,7 +105,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“Your face is kind of sad. Boom.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,7 +134,7 @@ __meta__ = {
 [node name="TinkerL2" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -157,7 +164,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "I’ve got an idea for a marvelous device! The most perfect invention, that still keeps impeccable time! But I can't build it because I’m missing some GEARS."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -169,7 +176,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“I don’t see why I should care.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -181,7 +188,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“Do you have any idea where to find them?”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -210,7 +217,7 @@ __meta__ = {
 [node name="TinkerL3" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -240,7 +247,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "I lost three of them somewhere in this desert. See if you can find them, would you?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -252,7 +259,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“Sure! Happy to help.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -264,7 +271,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“I most certainly would not.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -286,6 +293,85 @@ margin_top = 52.0
 margin_right = 186.0
 margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RejectPanel" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBorder" type="ColorRect" parent="RejectPanel"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="RejectPanel/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "You don’t have a lot of friends, do you?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinTeamPanel" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBorder" type="ColorRect" parent="JoinTeamPanel"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="JoinTeamPanel/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="JoinTeamPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "Spectacular! My gears! Now I can build my device. Thank you, friend! Allow me to join you on your journey."
 __meta__ = {
 "_edit_use_anchors_": false
 }

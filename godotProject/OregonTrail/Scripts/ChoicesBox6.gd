@@ -26,7 +26,7 @@ func setPopout(text):#called when popup before next scene
 	popupPan.set_position(Vector2(10,10))
 	popupPan.get_child(0).add_text(text)
 
-func choice0(): #Bail
+func choice0(): #Climb Over
 	if globalSingleton.character_status[6]>0: #if tinker is in party
 		setPopout("The Tinker springs into action, rigging up a rudimentary pump. The BOAT is emptied of water and you make it safely to the other side.")
 	else:

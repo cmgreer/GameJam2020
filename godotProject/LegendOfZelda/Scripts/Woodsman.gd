@@ -68,7 +68,7 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 			match boxNum:
 				0:
 					#good answer, join team, print thank you message
-					join_team()
+					launch_quest()
 				1:
 					#bad answer
 					backout()
@@ -86,3 +86,6 @@ func join_team():
 	popJoin.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
 	globalSingleton.character_status[3] = 2
 	globalSingleton.player_frozen = true
+	
+func launch_quest():
+	pass

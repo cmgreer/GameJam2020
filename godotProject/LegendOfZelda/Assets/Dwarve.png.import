@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hunter_1.png-c8282947b222d05b2eeb6019ade82191.stex"
+path="res://.import/Dwarve.png-798877e1f85546a7b44c65332bc22755.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Hunter_1.png"
-dest_files=[ "res://.import/Hunter_1.png-c8282947b222d05b2eeb6019ade82191.stex" ]
+source_file="res://LegendOfZelda/Assets/Dwarve.png"
+dest_files=[ "res://.import/Dwarve.png-798877e1f85546a7b44c65332bc22755.stex" ]
 
 [params]
 

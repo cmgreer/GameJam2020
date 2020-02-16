@@ -1,5 +1,6 @@
 extends ColorRect
 
+var textbox
 var selected_option
 var nextScene
 var scenePath
@@ -42,6 +43,8 @@ func _input(event):
 func _ready():
 	selected_option = 0
 	change_selected_color()
+	textbox = "A member of your pack, the noble " + globalSingleton.character_name[globalSingleton.injured_char] + ", has been INJURED! The clever WITCH has a potion that will be able to heal them, but she only has one."
+	$RichTextLabel.add_text(textbox)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

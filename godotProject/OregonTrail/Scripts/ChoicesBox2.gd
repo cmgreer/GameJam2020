@@ -17,7 +17,7 @@ func change_scene(): #Unfinished
 		globalSingleton.next_scene = 3
 		get_tree().change_scene("res://OregonTrail/Scenes/injury.tscn")
 	elif globalSingleton.character_status[0]==0: #if player is dead
-		pass #should jump to death scene
+		get_tree().change_scene("res://OregonTrail/Scenes/8.tscn")
 	else: #Next Scene
 		get_tree().change_scene("res://OregonTrail/Scenes/3.tscn")
 
@@ -33,7 +33,7 @@ func choice0(): #fight
 		setPopout("The brave HUNTER fights the TERRIBLE BEAST! They are gravely injured, but they have slain the creature. You continue on your way.")
 	else:
 		for i in range(6,-1,-1): #kill first healthy character
-			if globalSingleton.character_status[i]==2: #find first unlocked character
+			if globalSingleton.character_status[i]>0: #find first unlocked character
 				change_status(i,0) #dead character
 				popoutText = "The brave " + globalSingleton.character_name[i] + " fights the TERRIBLE BEAST! They manage to best the monster, but tragically perish in the process."
 				globalSingleton.beast_status = 0
@@ -42,8 +42,9 @@ func choice0(): #fight
 
 func choice1(): #run
 	for i in range(6,-1,-1): #injure first health character from bottom up
-		if globalSingleton.character_status[i]==2: #find first unlocked character
+		if globalSingleton.character_status[i]>0: #find first unlocked character
 			change_status(i,1) #injured character
+			globalSingleton.run_beast = 1
 			popoutText = "You flee from the TERRIBLE BEAST, crashing wildly through the foliage! In the chaos, " + globalSingleton.character_name[i] + " badly injures their leg."
 			break
 	setPopout(popoutText)
@@ -55,7 +56,7 @@ func choice2(): #intimidate
 		setPopout("The brave HUNTER stands up tall and intimidates the TERRIBLE BEAST! The creature, taken aback by this show of aggression, retreats into the woods.")
 	else:
 		for i in range(6,-1,-1): #kill first health character from bottom up
-			if globalSingleton.character_status[i]==2: #find first unlocked character
+			if globalSingleton.character_status[i]>0: #find first unlocked character
 				change_status(i,0) #dead character
 				popoutText = "The foolhardy " + globalSingleton.character_name[i] + " attempts to intimidate the TERRIBLE BEAST! Unfortunately, the monster does not fall for their blustering, and strikes them down where they stand."
 				break
