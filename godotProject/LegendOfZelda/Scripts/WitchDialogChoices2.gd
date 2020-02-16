@@ -68,6 +68,9 @@ func _ready():
 #	pass
 func acceptInput():
 	get_parent().get_parent().visible = false
+	var acceptRef = funcref(self, 'bar')
+	var leftRef = funcref(self, 'bar')
+	var rightRef = funcref(self, 'bar')
 	emit_signal("dialogBoxCheck",selected_option)
 func leftInput():
 	if selected_option > 0:
@@ -78,6 +81,9 @@ func leftInput():
 func rightInput():
 	selected_option = (selected_option + 1) % 2;
 	change_selected_color()
+
+func bar():
+	pass
 
 var acceptRef = funcref(self, 'acceptInput')
 var leftRef = funcref(self, 'leftInput')

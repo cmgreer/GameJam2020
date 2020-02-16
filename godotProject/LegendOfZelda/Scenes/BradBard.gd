@@ -34,5 +34,6 @@ func _on_PopupPanel_popup_hide():
 func _on_Area2D_body_entered(body):
 	if(body.get_name() == "Player"):
 		globalSingleton.Items_collected.append($AnimatedSprite)
+		globalSingleton.item_dictionary["Broom"] = true
 		#pop.popup_centered(Vector2(360,110))
 		#pop.set_position(globalSingleton.playerPosition+Vector2(-178, 60))
