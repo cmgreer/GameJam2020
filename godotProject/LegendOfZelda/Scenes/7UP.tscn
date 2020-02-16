@@ -6,7 +6,7 @@
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 3, 3 )
 
 [sub_resource type="AtlasTexture" id=6]
@@ -47,9 +47,9 @@ font_data = ExtResource( 4 )
 size = 6
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=15]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=16]
 size = 8
 font_data = ExtResource( 4 )
 
@@ -63,11 +63,11 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 115 )
 scale = Vector2( 40, 50 )
-shape = SubResource( 5 )
+shape = SubResource( 14 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="HunterL1" type="PopupPanel" parent="."]
@@ -322,7 +322,7 @@ __meta__ = {
 [node name="RejectPanel" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -352,7 +352,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 16 )
 text = "Well that was just uncalled for.
 "
 __meta__ = {
@@ -362,7 +362,7 @@ __meta__ = {
 [node name="JoinTeamPanel" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -392,7 +392,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 16 )
 text = "Wonderful! My PET, my sweet Frumpkin, has returned to me! Thank you, friend! Allow me to join you on your journey."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -405,3 +405,7 @@ __meta__ = {
 [connection signal="popup_hide" from="HunterL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="about_to_show" from="HunterL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="HunterL3" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
+[connection signal="popup_hide" from="RejectPanel" to="." method="_on_RejectPanel_popup_hide"]
+[connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
+[connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_popup_hide"]

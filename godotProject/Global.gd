@@ -11,7 +11,7 @@ var witch_potion = 1 #num of witch potions
 var injured_char
 var run_beast = 0
 
-var player_frozen = false
+var player_frozen = 0
 
 var playerPosition = Vector2(0,0)
 

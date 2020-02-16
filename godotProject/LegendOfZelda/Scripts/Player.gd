@@ -45,12 +45,16 @@ func get_input():
 		velocity.y -= 1
 	if Input.is_action_just_pressed('ui_cancel'):
 		$Sprite.visible=!$Sprite.visible
-		globalSingleton.player_frozen=$Sprite.visible
+		if($Sprite.visible):
+			globalSingleton.player_frozen -=1
+		else:
+			globalSingleton.player_frozen +=1
+			
 	
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
-	if(not globalSingleton.player_frozen):
+	if(globalSingleton.player_frozen >= 0):
 		get_input()
 # warning-ignore:return_value_discarded
 		move_and_collide(velocity * delta)

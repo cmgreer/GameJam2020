@@ -17,7 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (!globalSingleton.player_frozen):
+	if (globalSingleton.player_frozen >= 0):
 		var distance=self.position-globalSingleton.playerPosition
 		self.look_at(globalSingleton.playerPosition)
 		if(abs(distance.x)+abs(distance.y)<300):
@@ -32,11 +32,11 @@ func _process(delta):
 
 
 func _on_PopupPanel_about_to_show():
-	globalSingleton.player_frozen = true
+	globalSingleton.player_frozen -=1
 
 
 func _on_PopupPanel_popup_hide():
-	globalSingleton.player_frozen = false
+	globalSingleton.player_frozen +=1
 
 
 func _on_Area2D_body_entered(body):

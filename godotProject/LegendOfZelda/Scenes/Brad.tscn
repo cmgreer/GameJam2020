@@ -72,7 +72,7 @@ shape = SubResource( 10 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="BradL1" type="PopupPanel" parent="."]
@@ -413,3 +413,7 @@ __meta__ = {
 [connection signal="popup_hide" from="BradL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="about_to_show" from="BradL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="BradL3" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
+[connection signal="popup_hide" from="RejectPanel" to="." method="_on_RejectPanel_popup_hide"]
+[connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
+[connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_popup_hide"]

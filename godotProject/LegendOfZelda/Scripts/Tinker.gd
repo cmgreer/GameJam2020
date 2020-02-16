@@ -33,11 +33,11 @@ func _on_7UP_body_entered(body):
 
 
 func _on_PopupPanel_about_to_show():
-	globalSingleton.player_frozen = true
+	globalSingleton.player_frozen -=1
 
 
 func _on_PopupPanel_popup_hide():
-	globalSingleton.player_frozen = false
+	globalSingleton.player_frozen +=1
 
 
 func _on_ChoicesBox_dialogBoxCheck(boxNum):
@@ -49,7 +49,7 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 					dialogLevel = 2
 					popL2.popup_centered(Vector2(360,90))
 					popL2.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-					globalSingleton.player_frozen = true
+
 				1:
 					#bad answer, launch backout
 					backout()
@@ -63,7 +63,7 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 					dialogLevel = 3
 					popL3.popup_centered(Vector2(360,90))
 					popL3.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-					globalSingleton.player_frozen = true
+
 		3:
 			match boxNum:
 				0:
@@ -77,14 +77,29 @@ func backout():
 	popReject.popup_centered(Vector2(360,90))
 	popReject.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
 	globalSingleton.character_status[6] = 0
-	globalSingleton.player_frozen = true
+
 
 func join_team():
 	dialogLevel = 10
 	popJoin.popup_centered(Vector2(360,90))
 	popJoin.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
 	globalSingleton.character_status[6] = 2
-	globalSingleton.player_frozen = true
+
 
 func launch_quest():
 	pass
+
+
+func _on_RejectPanel_about_to_show():
+	globalSingleton.player_frozen -=1
+
+
+func _on_RejectPanel_popup_hide():
+	globalSingleton.player_frozen +=1
+
+
+func _on_JoinTeamPanel_about_to_show():
+	globalSingleton.player_frozen -=1
+
+func _on_JoinTeamPanel_about_to_hide():
+	globalSingleton.player_frozen +=1
