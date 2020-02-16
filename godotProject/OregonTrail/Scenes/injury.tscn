@@ -45,7 +45,6 @@ margin_top = 5.0
 margin_right = 67.0
 margin_bottom = 163.0
 custom_fonts/normal_font = SubResource( 1 )
-text = "A member of your pack, the noble <injured character>, has been INJURED! The clever WITCH has a potion that will be able to heal them, but she only has one."
 __meta__ = {
 "_edit_use_anchors_": false
 }
