@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://LegendOfZelda/Scenes/7UP.tscn" type="PackedScene" id=3]
 [ext_resource path="res://LegendOfZelda/Scenes/Witch.tscn" type="PackedScene" id=4]
 [ext_resource path="res://LegendOfZelda/Scenes/Brad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=6]
 [ext_resource path="res://LegendOfZelda/Scenes/Dwarf.tscn" type="PackedScene" id=7]
 
 [node name="Map" type="Node"]
@@ -46,3 +47,6 @@ position = Vector2( -67.28, 1088.86 )
 
 [node name="Witch" parent="." instance=ExtResource( 4 )]
 position = Vector2( 323.045, 989.861 )
+
+[node name="Tinker" parent="." instance=ExtResource( 6 )]
+position = Vector2( -451.947, 1312.3 )
