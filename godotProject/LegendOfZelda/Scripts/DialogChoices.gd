@@ -5,6 +5,7 @@ extends ColorRect
 # var b = "text"
 var selected_option
 var selected_character
+signal status_character(charnum, status)
 
 signal dialogBoxCheck(boxNum)
 
@@ -18,24 +19,28 @@ func change_selected_color():
 		1:
 			$Pointer1.color = Color.yellow
 
-func _input(event):
-	if event is InputEventKey:
-		var just_pressed = event.pressed and not event.echo
-		
-		if event.scancode == KEY_RIGHT and just_pressed:
-			selected_option = (selected_option + 1) % 2;
-			change_selected_color()
-		elif event.scancode == KEY_LEFT and just_pressed:
-			if selected_option > 0:
-				selected_option = selected_option - 1
-			else:
-				selected_option = 1
-			change_selected_color()
-		elif event.scancode == KEY_SPACE and just_pressed:
-			get_parent().get_parent().visible = false
-			emit_signal("dialogBoxCheck",selected_option)
+#func _input(event):
+#	if event is InputEventKey:
+#		var just_pressed = event.pressed and not event.echo
+#
+#		if event.scancode == KEY_RIGHT and just_pressed:
+#			selected_option = (selected_option + 1) % 2;
+#			change_selected_color()
+#		elif event.scancode == KEY_LEFT and just_pressed:
+#			if selected_option > 0:
+#				selected_option = selected_option - 1
+#			else:
+#				selected_option = 1
+#			change_selected_color()
+#		elif event.scancode == KEY_SPACE and just_pressed:
+#			get_parent().get_parent().visible = false
+#			emit_signal("dialogBoxCheck",selected_option)
 
 
+func status_character(): #unfinished
+	for i in range(1,7):
+		#emit_signal("status_character", i, global.)
+		pass
 	
 	match selected_character:
 		0:
@@ -61,3 +66,50 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+func acceptInput():
+	get_parent().get_parent().visible = false
+	var acceptRef = funcref(self, 'foo')
+	var leftRef = funcref(self, 'foo')
+	var rightRef = funcref(self, 'foo')
+	emit_signal("dialogBoxCheck",selected_option)
+func leftInput():
+	if selected_option > 0:
+		selected_option = selected_option - 1
+	else:
+		selected_option = 1
+	change_selected_color()
+func rightInput():
+	selected_option = (selected_option + 1) % 2;
+	change_selected_color()
+
+func foo():
+	pass
+
+var acceptRef = funcref(self, 'acceptInput')
+var leftRef = funcref(self, 'leftInput')
+var rightRef = funcref(self, 'rightInput')
+
+func acceptPassthrough():
+	acceptRef.call_func()
+func leftPassthrough():
+	leftRef.call_func()
+func rightPassthrough():
+	rightRef.call_func()
+
+
+func onShow():
+	globalSingleton.interactingAccept = funcref(self, 'acceptPassthrough')
+	globalSingleton.interactingLeft = funcref(self, 'leftPassthrough')
+	globalSingleton.interactingRight = funcref(self, 'rightPassthrough')
+
+
+func _on_BradL1_about_to_show():
+	pass # Replace with function body.
+
+
+func _on_DwarfL1_about_to_show():
+	pass # Replace with function body.
+
+
+func _on_DwarfL2_about_to_show():
+	pass # Replace with function body.

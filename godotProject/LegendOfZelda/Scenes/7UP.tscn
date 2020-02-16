@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://LegendOfZelda/Scripts/HunterDialogChoices.gd" type="Script" id=1]
+[ext_resource path="res://LegendOfZelda/Scripts/DialogChoices.gd" type="Script" id=1]
 [ext_resource path="res://LegendOfZelda/Assets/Hunter_1.png" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/Hunter.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
@@ -398,13 +398,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="." to="." method="_on_7UP_body_entered"]
+[connection signal="about_to_show" from="HunterL1" to="HunterL1/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="HunterL1" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="HunterL1" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="HunterL1/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="HunterL2" to="HunterL2/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="HunterL2" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="HunterL2" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="dialogBoxCheck" from="HunterL2/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="HunterL3" to="HunterL3/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="HunterL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="HunterL3" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="dialogBoxCheck" from="HunterL3/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
 [connection signal="popup_hide" from="RejectPanel" to="." method="_on_RejectPanel_popup_hide"]
 [connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]

@@ -61,6 +61,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
+frame = 2
 playing = true
 
 [node name="DwarfL1" type="PopupPanel" parent="."]
@@ -391,11 +392,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="." to="." method="_on_7UP_body_entered"]
+[connection signal="about_to_show" from="DwarfL1" to="DwarfL1/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="DwarfL1" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="DwarfL1" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="DwarfL1/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="DwarfL2" to="DwarfL2/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="DwarfL2" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="DwarfL2" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="DwarfL3" to="DwarfL3/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="DwarfL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="DwarfL3" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_PopupPanel_about_to_show"]

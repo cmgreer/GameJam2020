@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://LegendOfZelda/Scenes/BradBard.tscn" type="PackedScene" id=8]
 [ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=9]
 [ext_resource path="res://LegendOfZelda/Assets/sanic.jpg" type="Texture" id=10]
+[ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=11]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=12]
 
 [sub_resource type="Curve2D" id=1]
@@ -83,6 +84,9 @@ anims/path = SubResource( 2 )
 [node name="BradBard" parent="Path2D/PathFollow2D" instance=ExtResource( 8 )]
 position = Vector2( 0, -0.000244141 )
 rotation = 8.64267e-06
+
+[node name="Broom" parent="Path2D/PathFollow2D/BradBard" instance=ExtResource( 11 )]
+position = Vector2( -468.819, 211.999 )
 
 [node name="Witch" parent="." instance=ExtResource( 5 )]
 position = Vector2( -213.888, 661.521 )

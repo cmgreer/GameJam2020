@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://LegendOfZelda/Scripts/TinkerDialogChoices.gd" type="Script" id=1]
+[ext_resource path="res://LegendOfZelda/Scripts/DialogChoices.gd" type="Script" id=1]
 [ext_resource path="res://LegendOfZelda/Assets/tinkerer.png" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/Tinker.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
@@ -67,7 +67,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="TinkerL1" type="PopupPanel" parent="."]
@@ -398,11 +398,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="." to="." method="_on_7UP_body_entered"]
+[connection signal="about_to_show" from="TinkerL1" to="TinkerL1/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="TinkerL1" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="TinkerL1" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="TinkerL1/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="TinkerL2" to="TinkerL2/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="TinkerL2" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="TinkerL2" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="TinkerL3" to="TinkerL3/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="TinkerL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="TinkerL3" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
