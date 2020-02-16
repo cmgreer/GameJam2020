@@ -81,9 +81,9 @@ __meta__ = {
 }
 
 [node name="Choice0" type="RichTextLabel" parent="DwarfL1/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
+margin_left = 50.0
 margin_top = 50.0
-margin_right = 132.0
+margin_right = 157.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
@@ -93,9 +93,9 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="DwarfL1/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
+margin_left = 225.0
 margin_top = 50.0
-margin_right = 297.0
+margin_right = 332.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
@@ -105,9 +105,9 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="DwarfL1/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
+margin_left = 43.0
 margin_top = 52.0
-margin_right = 20.0
+margin_right = 45.0
 margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
@@ -115,9 +115,9 @@ __meta__ = {
 }
 
 [node name="Pointer1" type="ColorRect" parent="DwarfL1/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
+margin_left = 218.0
 margin_top = 52.0
-margin_right = 186.0
+margin_right = 220.0
 margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
@@ -164,10 +164,10 @@ __meta__ = {
 }
 
 [node name="Choice0" type="RichTextLabel" parent="DwarfL2/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
-margin_top = 50.0
-margin_right = 132.0
-margin_bottom = 70.0
+margin_left = 40.0
+margin_top = 56.0
+margin_right = 147.0
+margin_bottom = 76.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "That’s dumb. You’re dumb."
@@ -176,10 +176,10 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="DwarfL2/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
-margin_top = 50.0
-margin_right = 297.0
-margin_bottom = 70.0
+margin_left = 201.0
+margin_top = 56.0
+margin_right = 308.0
+margin_bottom = 76.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "You should give them away!"
@@ -188,20 +188,20 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="DwarfL2/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
-margin_top = 52.0
-margin_right = 20.0
-margin_bottom = 56.0
+margin_left = 34.0
+margin_top = 58.0
+margin_right = 36.0
+margin_bottom = 62.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pointer1" type="ColorRect" parent="DwarfL2/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
-margin_top = 52.0
-margin_right = 186.0
-margin_bottom = 56.0
+margin_left = 195.0
+margin_top = 58.0
+margin_right = 197.0
+margin_bottom = 62.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -259,9 +259,9 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="DwarfL3/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
+margin_left = 220.0
 margin_top = 50.0
-margin_right = 297.0
+margin_right = 327.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
@@ -281,6 +281,86 @@ __meta__ = {
 }
 
 [node name="Pointer1" type="ColorRect" parent="DwarfL3/ChoicesBorder/ChoicesBox"]
+margin_left = 213.0
+margin_top = 52.0
+margin_right = 215.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RejectPanel" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBorder" type="ColorRect" parent="RejectPanel"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="RejectPanel/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice0" type="RichTextLabel" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 25.0
+margin_top = 50.0
+margin_right = 132.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_fonts/normal_font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice1" type="RichTextLabel" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 190.0
+margin_top = 50.0
+margin_right = 297.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_fonts/normal_font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer0" type="ColorRect" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 18.0
+margin_top = 52.0
+margin_right = 20.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer1" type="ColorRect" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
 margin_left = 184.0
 margin_top = 52.0
 margin_right = 186.0
@@ -297,3 +377,6 @@ __meta__ = {
 [connection signal="popup_hide" from="DwarfL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="about_to_show" from="DwarfL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="DwarfL3" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="RejectPanel" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="popup_hide" from="RejectPanel" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="dialogBoxCheck" from="RejectPanel/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]

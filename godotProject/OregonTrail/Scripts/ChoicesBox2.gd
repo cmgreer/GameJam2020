@@ -9,13 +9,17 @@ var deadChar
 var injuredChar
 var popoutText
 var chosen = 0
+var someoneInjured = 0
 onready var popupPan = get_parent().get_parent().get_child(3)#getting popup panel
 
 func change_scene(): #called when scene is changed (unfinished)
-
-		pass
-
-		#next scene
+	if injuredChar!=null && globalSingleton.character_status[2]>0 && globalSingleton.witch_potion>0: #if there is an injured character this scene, witch is alive and has potion
+		#should jump to injured scene - need to change path
+		get_tree().change_scene("res://LegendOfZelda/Scenes/Overworld.tscn")
+	elif globalSingleton.character_status[0]==0: #if player is dead
+		pass #should jump to death scene
+	else: #need to change path
+		get_tree().change_scene("res://LegendOfZelda/Scenes/Overworld.tscn")
 
 func setPopout(text):#called when popup before next scene
 	popupPan.popup_centered(Vector2(300,160))
@@ -25,6 +29,7 @@ func setPopout(text):#called when popup before next scene
 func choice0(): #fight
 	if globalSingleton.character_status[1]==2: #if hunter is healthy
 		change_status(1,1) #hunter injured
+		globalSingleton.beast_status = (0)
 		setPopout("The brave HUNTER fights the TERRIBLE BEAST! They are gravely injured, but they have slain the creature. You continue on your way.")
 	else:
 		for i in range(1,7):
@@ -126,6 +131,7 @@ func _ready():
 	#reset menu choice
 	selected_option = 0
 	change_selected_color()
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
