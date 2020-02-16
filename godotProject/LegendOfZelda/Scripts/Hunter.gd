@@ -28,6 +28,8 @@ func _on_7UP_body_entered(body):
 			dialogLevel = 1
 			popL1.popup_centered(Vector2(360,90))
 			popL1.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
+		if(dialogLevel == 3 && globalSingleton.item_dictionary["Bunny"]):
+			join_team()
 	
 
 

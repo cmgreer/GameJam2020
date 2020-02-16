@@ -62,7 +62,6 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-frame = 2
 playing = true
 
 [node name="WitchL1" type="PopupPanel" parent="."]
@@ -397,8 +396,8 @@ __meta__ = {
 [connection signal="about_to_show" from="WitchL1" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="WitchL1" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="WitchL1/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
-[connection signal="about_to_show" from="WitchL2" to="WitchL2/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="WitchL2" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="about_to_show" from="WitchL2" to="WitchL2/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="popup_hide" from="WitchL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="WitchL2/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
 [connection signal="about_to_show" from="WitchL3" to="WitchL3/ChoicesBorder/ChoicesBox" method="onShow"]
