@@ -19,7 +19,7 @@ func change_scene(): #Unfinished
 	elif globalSingleton.character_status[0]==0: #if player is dead
 		get_tree().change_scene("res://OregonTrail/Scenes/8.tscn")
 	else: #Next Scene
-		get_tree().change_scene("res://OregonTrail/Scenes/5.tscn")
+		get_tree().change_scene("res://OregonTrail/Scenes/6.tscn")
 
 func setPopout(text):#called when popup before next scene
 	popupPan.popup_centered(Vector2(300,160))
