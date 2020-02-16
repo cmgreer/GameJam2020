@@ -5,35 +5,71 @@ extends ColorRect
 # var b = "text"
 var selected_option
 var changed = 0
+var deadChar
+var injuredChar
+var popoutText
+var chosen = 0
 onready var popupPan = get_parent().get_parent().get_child(3)#getting popup panel
 
 func change_scene(): #called when scene is changed (unfinished)
-	#player dead
-	#character dead
-	#next scene
-	pass 
 
-func setPoput(text):#called when popup before next scene
+		pass
+
+		#next scene
+
+func setPopout(text):#called when popup before next scene
 	popupPan.popup_centered(Vector2(300,160))
 	popupPan.set_position(Vector2(10,10))
 	popupPan.get_child(0).add_text(text)
 
 func choice0(): #fight
-	if globalSingleton.character_status[1]==2:
+	if globalSingleton.character_status[1]==2: #if hunter is healthy
 		change_status(1,1) #hunter injured
-		setPoput("The brave HUNTER fights the TERRIBLE BEAST! They are gravely injured, but they have slain the creature. You continue on your way.")
+		setPopout("The brave HUNTER fights the TERRIBLE BEAST! They are gravely injured, but they have slain the creature. You continue on your way.")
 	else:
 		for i in range(1,7):
 			if globalSingleton.character_status[i]==2: #find first unlocked character
 				change_status(i,0) #dead character
 				changed = 1
+				deadChar = i
+				break
 		if changed==0:
 			change_status(0,0)#player dead
-			
+			deadChar = 0
+		popoutText = "The brave " + globalSingleton.character_name[deadChar] + " fights the TERRIBLE BEAST! They manage to best the monster, but tragically perish in the process."
+		setPopout(popoutText)
+
 func choice1(): #run
-	pass
+	for i in range(1,7):
+			if globalSingleton.character_status[i]==2: #find first unlocked character
+				change_status(i,1) #injured character
+				changed = 1
+				injuredChar = i
+				break
+	if changed==0:
+			change_status(0,1)#player injured
+			injuredChar = 0
+	popoutText = "You flee from the TERRIBLE BEAST, crashing wildly through the foliage! In the chaos, " + globalSingleton.character_name[injuredChar] + " badly injures their leg."
+	setPopout(popoutText)
+
+
 func choice2(): #intimidate
-	pass
+	if globalSingleton.character_status[1]==2: #if hunter is healthy
+		change_status(1,1) #hunter injured
+		setPopout("The brave HUNTER stands up tall and intimidates the TERRIBLE BEAST! The creature, taken aback by this show of aggression, retreats into the woods.")
+	else:
+		for i in range(1,7):
+			if globalSingleton.character_status[i]==2: #find first unlocked character
+				change_status(i,0) #dead character
+				changed = 1
+				deadChar = i
+				break
+		if changed==0:
+			change_status(0,0)#player dead
+			deadChar = 0
+		popoutText = "The foolhardy " + globalSingleton.character_name[deadChar] + " attempts to intimidate the TERRIBLE BEAST! Unfortunately, the monster does not fall for their blustering, and strikes them down where they stand."
+		setPopout(popoutText)
+		
 
 func change_selected_color():
 	$Pointer0.color = Color("3C2828")
@@ -64,11 +100,23 @@ func _input(event):
 		elif event.scancode == KEY_SPACE and just_pressed:
 			match selected_option:
 				0:
-					choice0()
+					if chosen == 0:
+						choice0()
+						chosen = 1
+					elif chosen == 1:
+						change_scene()
 				1:
-					choice1()
+					if chosen == 0:
+						choice1()
+						chosen = 1
+					elif chosen == 1:
+						change_scene()
 				2:
-					choice2()
+					if chosen == 0:
+						choice2()
+						chosen = 1
+					elif chosen == 1:
+						change_scene()
 
 func change_status(characterNum, status):
 	globalSingleton.character_status[characterNum] = status

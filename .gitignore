@@ -9,3 +9,5 @@ export.cfg
 .mono/
 data_*/
 
+.DS_STORE
+

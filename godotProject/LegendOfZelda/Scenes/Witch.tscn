@@ -55,6 +55,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
+frame = 3
 playing = true
 
 [node name="WitchL1" type="PopupPanel" parent="."]
