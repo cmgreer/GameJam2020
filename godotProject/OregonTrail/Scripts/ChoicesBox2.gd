@@ -41,8 +41,9 @@ func choice0(): #fight
 		setPopout(popoutText)
 
 func choice1(): #run
+	popoutText = "You flee from the TERRIBLE BEAST, crashing wildly through the foliage! In the chaos, Player badly injures their leg."
 	for i in range(6,-1,-1): #injure first health character from bottom up
-		if globalSingleton.character_status[i]>0: #find first unlocked character
+		if globalSingleton.character_status[i]==2: #find first unlocked character
 			change_status(i,1) #injured character
 			globalSingleton.run_beast = 1
 			popoutText = "You flee from the TERRIBLE BEAST, crashing wildly through the foliage! In the chaos, " + globalSingleton.character_name[i] + " badly injures their leg."

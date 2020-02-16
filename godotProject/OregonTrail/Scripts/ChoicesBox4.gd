@@ -65,6 +65,7 @@ func choice2(): #intimidate it
 	setPopout(popoutText)
 	
 func choice3(): #Flee through the cave
+	popoutText = "You flee from the TERRIBLE BEAST, running wildly through the DARK CAVE! In the darkness, Player badly injures themselves."
 	for i in range(6,-1,-1): #injure first health character from bottom up
 		if globalSingleton.character_status[i]==2: #find first unlocked character
 			change_status(i,1) #injured character

@@ -56,6 +56,7 @@ func setPopout(text):#called when popup before next scene
 	popupPan.get_child(0).add_text(text)
 
 func choice0(): #One at a time
+	popoutText = "You attempt to make your way across the RIVER individually. Along the way, the hardy Player slips and nearly falls, injuring themselves on the rocks."
 	for i in range(6,-1,-1): #injure first healthy character
 		if globalSingleton.character_status[i]==1: #find first unlocked character
 			change_status(i,0) #injure character
