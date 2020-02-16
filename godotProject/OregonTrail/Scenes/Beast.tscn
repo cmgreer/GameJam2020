@@ -78,6 +78,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Player"]
+margin_left = -762.5
+margin_top = -124.0
+margin_right = -690.5
+margin_bottom = -104.0
+rect_scale = Vector2( 12.5, 12.5 )
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Character" type="Sprite" parent="Panel/CharacterBorder/CharacterBox"]
 position = Vector2( 12, 39 )
 scale = Vector2( 0.08, 0.08 )
@@ -95,7 +106,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Status" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character"]
+[node name="Status2" type="ColorRect" parent="Panel/CharacterBorder/CharacterBox/Character"]
 margin_left = -125.0
 margin_top = -125.0
 margin_right = -53.0
@@ -338,7 +349,6 @@ __meta__ = {
 }
 
 [node name="PopupPanel" type="PopupPanel" parent="Panel"]
-visible = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 310.0
