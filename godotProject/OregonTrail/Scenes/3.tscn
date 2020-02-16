@@ -1,9 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://OregonTrail/Scripts/ChoicesBox3.gd" type="Script" id=2]
 [ext_resource path="res://OregonTrail/portraits/player.png" type="Texture" id=3]
 [ext_resource path="res://OregonTrail/Scripts/CharacterBox.gd" type="Script" id=4]
+[ext_resource path="res://OregonTrail/portraits/Woodsman_Portrait.png" type="Texture" id=5]
+[ext_resource path="res://OregonTrail/portraits/Witch_Portrait.png" type="Texture" id=6]
+[ext_resource path="res://OregonTrail/portraits/Dwarf_Portrait.png" type="Texture" id=7]
+[ext_resource path="res://OregonTrail/portraits/Bard_Portrait.png" type="Texture" id=8]
+[ext_resource path="res://OregonTrail/portraits/Hunter_Portrait.png" type="Texture" id=9]
+[ext_resource path="res://OregonTrail/portraits/Tinkerer_Portrait.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 13
@@ -92,7 +98,7 @@ __meta__ = {
 [node name="Character" type="Sprite" parent="Panel/CharacterBorder/CharacterBox"]
 position = Vector2( 12, 39 )
 scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 3 )
+texture = ExtResource( 9 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/CharacterBorder/CharacterBox/Character"]
 margin_left = 162.5
@@ -120,7 +126,7 @@ __meta__ = {
 [node name="Character2" type="Sprite" parent="Panel/CharacterBorder/CharacterBox"]
 position = Vector2( 12, 62 )
 scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/CharacterBorder/CharacterBox/Character2"]
 margin_left = 162.5
@@ -148,7 +154,7 @@ __meta__ = {
 [node name="Character3" type="Sprite" parent="Panel/CharacterBorder/CharacterBox"]
 position = Vector2( 12, 85 )
 scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 3 )
+texture = ExtResource( 7 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/CharacterBorder/CharacterBox/Character3"]
 margin_left = 162.5
@@ -176,7 +182,7 @@ __meta__ = {
 [node name="Character4" type="Sprite" parent="Panel/CharacterBorder/CharacterBox"]
 position = Vector2( 12, 108 )
 scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 3 )
+texture = ExtResource( 8 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/CharacterBorder/CharacterBox/Character4"]
 margin_left = 162.5
@@ -204,7 +210,7 @@ __meta__ = {
 [node name="Character5" type="Sprite" parent="Panel/CharacterBorder/CharacterBox"]
 position = Vector2( 12, 131 )
 scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/CharacterBorder/CharacterBox/Character5"]
 margin_left = 162.5
@@ -232,7 +238,7 @@ __meta__ = {
 [node name="Character6" type="Sprite" parent="Panel/CharacterBorder/CharacterBox"]
 position = Vector2( 12, 154 )
 scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 3 )
+texture = ExtResource( 10 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/CharacterBorder/CharacterBox/Character6"]
 margin_left = 162.5
