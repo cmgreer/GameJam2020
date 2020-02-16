@@ -37,3 +37,4 @@ func _on_Area2D_body_entered(body):
 		globalSingleton.item_dictionary["Broom"] = true
 		#pop.popup_centered(Vector2(360,110))
 		#pop.set_position(globalSingleton.playerPosition+Vector2(-178, 60))
+		self.position = Vector2(1e5, 1e5)
