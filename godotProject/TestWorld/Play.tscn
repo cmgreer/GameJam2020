@@ -1,0 +1,249 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://LegendOfZelda/Assets/player_blink.png" type="Texture" id=1]
+[ext_resource path="res://TestWorld/Play.gd" type="Script" id=2]
+[ext_resource path="res://TestWorld/Cam.gd" type="Script" id=3]
+[ext_resource path="res://TestWorld/Backg.tscn" type="PackedScene" id=4]
+[ext_resource path="res://LegendOfZelda/Assets/player_walk_Sideways.png" type="Texture" id=5]
+[ext_resource path="res://LegendOfZelda/Assets/player_walk.png" type="Texture" id=6]
+[ext_resource path="res://LegendOfZelda/Assets/player_Walk_Back.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 89, 150 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 89, 0, 89, 150 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 178, 0, 89, 150 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 267, 0, 89, 150 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 2 ), SubResource( 4 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 61, 150 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 61, 0, 61, 150 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 122, 0, 61, 150 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 183, 0, 61, 150 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 244, 0, 61, 150 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 305, 0, 61, 150 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 366, 0, 61, 150 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 427, 0, 61, 150 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 81, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 162, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 243, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 324, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 405, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 486, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 567, 0, 81, 150 )
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 81, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 162, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 243, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 324, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 405, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 486, 0, 81, 150 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 567, 0, 81, 150 )
+
+[sub_resource type="SpriteFrames" id=32]
+animations = [ {
+"frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=33]
+radius = 60.0
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Standing" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+frame = 9
+playing = true
+
+[node name="WalkingLeft" type="AnimatedSprite" parent="."]
+visible = false
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+frames = SubResource( 14 )
+frame = 2
+playing = true
+
+[node name="WalkingRight" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 14 )
+frame = 2
+playing = true
+
+[node name="WalkingBackward" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 23 )
+frame = 3
+playing = true
+
+[node name="WalkingForward" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( -4.914, 0 )
+frames = SubResource( 32 )
+frame = 3
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 55.319 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 33 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_left = 464.065
+margin_top = -289.302
+margin_right = 564.065
+margin_bottom = -189.301
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 100, 100 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="ViewportContainer/Viewport"]
+current = true
+zoom = Vector2( 10, 10 )
+script = ExtResource( 3 )
+
+[node name="Background" parent="ViewportContainer/Viewport" instance=ExtResource( 4 )]
