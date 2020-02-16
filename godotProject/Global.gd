@@ -21,7 +21,7 @@ var currrent_quests=[]
 var Items_collected = []
 var item_dictionary = {"Broom":false, "Gem":false,
 "Bunny":false, "Gears":0, "Stone":false}
-var items_amount = 5
+var items_amount = 7
 
 	
 var playerPosition = Vector2(0,0)

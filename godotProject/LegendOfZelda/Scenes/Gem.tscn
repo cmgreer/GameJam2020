@@ -4,7 +4,7 @@
 [ext_resource path="res://LegendOfZelda/Scripts/Gem.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 23.228, 13.739 )
+extents = Vector2( 8.04961, 5.56821 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -15,11 +15,13 @@ animations = [ {
 } ]
 
 [node name="Gem" type="Area2D"]
+scale = Vector2( 4, 4 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_Gem_body_entered"]
