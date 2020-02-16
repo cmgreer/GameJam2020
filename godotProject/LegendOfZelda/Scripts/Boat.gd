@@ -28,10 +28,8 @@ func _on_Boat_body_entered(body):
 
 
 func _on_MessageBox_popup_hide():
-	print("test")
 	globalSingleton.player_frozen +=1
 
 
 func _on_MessageBox_about_to_show():
-	print("test2")
 	globalSingleton.player_frozen -=1
