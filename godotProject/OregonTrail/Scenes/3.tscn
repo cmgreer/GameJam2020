@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://OregonTrail/Scripts/ChoicesBox3.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://OregonTrail/portraits/Bard_Portrait.png" type="Texture" id=8]
 [ext_resource path="res://OregonTrail/portraits/Hunter_Portrait.png" type="Texture" id=9]
 [ext_resource path="res://OregonTrail/portraits/Tinkerer_Portrait.png" type="Texture" id=10]
+[ext_resource path="res://OregonTrail/Entities/sceneLandscapes/Stupid_Trees_4960x2480.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 13
@@ -45,6 +46,11 @@ margin_bottom = 115.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Stupid_Trees_4960x2480" type="Sprite" parent="Panel/Art"]
+position = Vector2( 117, 59 )
+scale = Vector2( 0.123, 0.123 )
+texture = ExtResource( 11 )
 
 [node name="CharacterBorder" type="ColorRect" parent="Panel"]
 margin_left = 234.0
