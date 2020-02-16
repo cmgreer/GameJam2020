@@ -8,6 +8,7 @@ onready var popL1 = get_child(2)
 onready var popL2 = get_child(3)
 onready var popL3 = get_child(4)
 
+
 var dialogLevel = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -53,10 +54,10 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 					backout()
 		2:
 			match boxNum:
-				0:
+				1:
 					#bad answer
 					backout()
-				1:
+				0:
 					#good answer, launch l3
 					dialogLevel = 3
 					popL3.popup_centered(Vector2(360,90))
@@ -66,7 +67,7 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 			match boxNum:
 				0:
 					#good answer, join team, print thank you message
-					join_team()
+					launch_quest()
 				1:
 					#bad answer
 					backout()
@@ -77,4 +78,7 @@ func backout():
 
 func join_team():
 	#hero joins the team
+	pass
+	
+func launch_quest():
 	pass

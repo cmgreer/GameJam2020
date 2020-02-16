@@ -5,6 +5,7 @@ extends ColorRect
 # var b = "text"
 var selected_option
 var selected_character
+signal status_character(charnum, status)
 
 signal dialogBoxCheck(boxNum)
 
@@ -36,6 +37,10 @@ func _input(event):
 			emit_signal("dialogBoxCheck",selected_option)
 
 
+func status_character(): #unfinished
+	for i in range(1,7):
+		#emit_signal("status_character", i, global.)
+		pass
 	
 	match selected_character:
 		0:
