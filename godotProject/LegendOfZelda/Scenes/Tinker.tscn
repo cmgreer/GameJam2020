@@ -110,10 +110,10 @@ __meta__ = {
 }
 
 [node name="Choice0" type="RichTextLabel" parent="TinkerL1/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
-margin_top = 50.0
-margin_right = 132.0
-margin_bottom = 70.0
+margin_left = 17.0
+margin_top = 45.0
+margin_right = 124.0
+margin_bottom = 65.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 9 )
 text = "“What’s making you sad?”"
@@ -122,10 +122,10 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="TinkerL1/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
-margin_top = 50.0
-margin_right = 297.0
-margin_bottom = 70.0
+margin_left = 175.0
+margin_top = 45.0
+margin_right = 282.0
+margin_bottom = 65.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 9 )
 text = "“Your face is kind of sad. Boom.”"
@@ -134,20 +134,20 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="TinkerL1/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
-margin_top = 52.0
-margin_right = 20.0
-margin_bottom = 56.0
+margin_left = 10.0
+margin_top = 47.0
+margin_right = 12.0
+margin_bottom = 51.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pointer1" type="ColorRect" parent="TinkerL1/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
-margin_top = 52.0
-margin_right = 186.0
-margin_bottom = 56.0
+margin_left = 169.0
+margin_top = 47.0
+margin_right = 171.0
+margin_bottom = 51.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -193,10 +193,10 @@ __meta__ = {
 }
 
 [node name="Choice0" type="RichTextLabel" parent="TinkerL2/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
-margin_top = 50.0
-margin_right = 132.0
-margin_bottom = 70.0
+margin_left = 20.0
+margin_top = 55.0
+margin_right = 127.0
+margin_bottom = 75.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 9 )
 text = "“I don’t see why I should care.”"
@@ -205,10 +205,10 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="TinkerL2/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
-margin_top = 50.0
-margin_right = 297.0
-margin_bottom = 70.0
+margin_left = 170.0
+margin_top = 55.0
+margin_right = 277.0
+margin_bottom = 75.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 9 )
 text = "“Do you have any idea where to find them?”"
@@ -217,20 +217,20 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="TinkerL2/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
-margin_top = 52.0
-margin_right = 20.0
-margin_bottom = 56.0
+margin_left = 13.0
+margin_top = 57.0
+margin_right = 15.0
+margin_bottom = 61.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pointer1" type="ColorRect" parent="TinkerL2/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
-margin_top = 52.0
-margin_right = 186.0
-margin_bottom = 56.0
+margin_left = 163.0
+margin_top = 57.0
+margin_right = 165.0
+margin_bottom = 61.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
