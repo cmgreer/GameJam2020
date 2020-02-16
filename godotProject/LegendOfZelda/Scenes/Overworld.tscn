@@ -7,6 +7,7 @@
 [ext_resource path="res://LegendOfZelda/Scenes/Brad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=6]
 [ext_resource path="res://LegendOfZelda/Scenes/Dwarf.tscn" type="PackedScene" id=7]
+[ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=4]
 
 [node name="Map" type="Node"]
 __meta__ = {
@@ -53,3 +54,6 @@ position = Vector2( -451.947, 1312.3 )
 
 [node name="7UP" parent="." instance=ExtResource( 3 )]
 position = Vector2( 458.804, 1493.96 )
+
+[node name="Broom" parent="." instance=ExtResource( 4 )]
+scale = Vector2( 1, 1 )

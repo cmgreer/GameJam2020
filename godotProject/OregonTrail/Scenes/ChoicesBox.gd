@@ -16,8 +16,7 @@ func change_scene(): #called when scene is changed (unfinished)
 func setPoput(text):#called when popup before next scene
 	popupPan.popup_centered(Vector2(300,160))
 	popupPan.set_position(Vector2(10,10))
-	text = "[center]"+"[/center]"
-	popupPan.get_child(0).append_bbcode(text)
+	popupPan.get_child(0).add_text(text)
 
 func choice0(): #fight
 	if globalSingleton.character_status[1]==2:
