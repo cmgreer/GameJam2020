@@ -94,7 +94,6 @@ anims/path = SubResource( 2 )
 [node name="BradBard" parent="Path2D/PathFollow2D" instance=ExtResource( 8 )]
 position = Vector2( 0, -0.000244141 )
 rotation = 8.64267e-06
-scale = Vector2( 1, 1 )
 
 [node name="Witch" parent="." instance=ExtResource( 5 )]
 position = Vector2( -213.888, 661.521 )
