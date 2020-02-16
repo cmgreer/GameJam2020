@@ -6,50 +6,50 @@
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3, 3 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 97, 150 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 97, 0, 97, 150 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 194, 0, 97, 150 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 291, 0, 97, 150 )
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 6.0
 } ]
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=8]
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=9]
 size = 6
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxEmpty" id=15]
+[sub_resource type="StyleBoxEmpty" id=10]
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=11]
 size = 8
 font_data = ExtResource( 4 )
 
@@ -63,17 +63,16 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 115 )
 scale = Vector2( 40, 50 )
-shape = SubResource( 14 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 10 )
-frame = 2
+frames = SubResource( 6 )
 playing = true
 
 [node name="HunterL1" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -103,7 +102,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 12 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "I used to be the greatest HUNTER in all the land. But these days, I’m feeling a little lonely."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -115,7 +114,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Do you want to talk about it?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,7 +126,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Do I look like I care? Go suck an egg!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -156,7 +155,7 @@ __meta__ = {
 [node name="HunterL2" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -186,7 +185,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 12 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "I used to have a PET, a small rabbit that I cared for very much. But he’s gone and left me. Now I’m all alone."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -198,7 +197,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Are you sure he’s not just lost?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -210,7 +209,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "I’m about to leave you, too. Byeeeeeeeeeeeee!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -239,7 +238,7 @@ __meta__ = {
 [node name="HunterL3" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -269,7 +268,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 12 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "Hm, I hadn’t considered that. Say, friend, could you help me out and see if you can find him?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -281,7 +280,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“Of course!”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -293,7 +292,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "“This sounds like a ‘you’ problem.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -322,7 +321,7 @@ __meta__ = {
 [node name="RejectPanel" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 15 )
+custom_styles/panel = SubResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -352,7 +351,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 16 )
+custom_fonts/normal_font = SubResource( 11 )
 text = "Well that was just uncalled for.
 "
 __meta__ = {
@@ -362,7 +361,7 @@ __meta__ = {
 [node name="JoinTeamPanel" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 15 )
+custom_styles/panel = SubResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -392,7 +391,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 16 )
+custom_fonts/normal_font = SubResource( 11 )
 text = "Wonderful! My PET, my sweet Frumpkin, has returned to me! Thank you, friend! Allow me to join you on your journey."
 __meta__ = {
 "_edit_use_anchors_": false
