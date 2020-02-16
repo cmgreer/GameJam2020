@@ -69,7 +69,7 @@ func acceptInput():
 	var acceptRef = funcref(self, 'foo')
 	var leftRef = funcref(self, 'foo')
 	var rightRef = funcref(self, 'foo')
-	if(selected_option == 0):
+	if(selected_option == 1):
 		launch_boat()
 func leftInput():
 	if selected_option > 0:

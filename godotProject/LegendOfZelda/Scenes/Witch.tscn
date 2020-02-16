@@ -4,7 +4,7 @@
 [ext_resource path="res://LegendOfZelda/Assets/witch.png" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/DialogChoices.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
+[ext_resource path="res://LegendOfZelda/Scripts/TextPanel.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 7 )
@@ -62,6 +62,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="WitchL1" type="PopupPanel" parent="."]
@@ -396,15 +397,17 @@ __meta__ = {
 [connection signal="about_to_show" from="WitchL1" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="WitchL1" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="WitchL1/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
-[connection signal="about_to_show" from="WitchL2" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="about_to_show" from="WitchL2" to="WitchL2/ChoicesBorder/ChoicesBox" method="onShow"]
+[connection signal="about_to_show" from="WitchL2" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="WitchL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="WitchL2/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
 [connection signal="about_to_show" from="WitchL3" to="WitchL3/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="WitchL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="WitchL3" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="WitchL3/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="RejectPanel" to="RejectPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
 [connection signal="popup_hide" from="RejectPanel" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="JoinTeamPanel" to="JoinTeamPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
 [connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_popup_hide"]

@@ -4,7 +4,7 @@
 [ext_resource path="res://LegendOfZelda/Assets/tinkerer.png" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/Tinker.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
+[ext_resource path="res://LegendOfZelda/Scripts/TextPanel.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 7 )
@@ -410,7 +410,9 @@ __meta__ = {
 [connection signal="about_to_show" from="TinkerL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="TinkerL3" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="TinkerL3/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="RejectPanel" to="RejectPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
 [connection signal="popup_hide" from="RejectPanel" to="." method="_on_PopupPanel_popup_hide"]
+[connection signal="about_to_show" from="JoinTeamPanel" to="JoinTeamPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
 [connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_PopupPanel_popup_hide"]

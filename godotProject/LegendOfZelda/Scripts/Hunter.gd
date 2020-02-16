@@ -106,3 +106,5 @@ func _on_JoinTeamPanel_about_to_show():
 
 func _on_JoinTeamPanel_about_to_hide():
 	globalSingleton.player_frozen +=1
+
+

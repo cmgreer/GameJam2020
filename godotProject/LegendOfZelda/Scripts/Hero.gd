@@ -49,7 +49,6 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 					dialogLevel = 2
 					popL2.popup_centered(Vector2(360,90))
 					popL2.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-
 				1:
 					#bad answer, launch backout
 					backout()
