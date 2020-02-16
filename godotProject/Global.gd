@@ -9,6 +9,7 @@ var next_scene = 1
 var beast_status = 1 #beast alive
 var witch_potion = 1 #num of witch potions
 var injured_char
+var run_beast = 0
 
 var player_frozen = false
 
