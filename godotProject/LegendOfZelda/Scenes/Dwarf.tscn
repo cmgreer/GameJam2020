@@ -1,19 +1,40 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scripts/Hero.gd" type="Script" id=1]
-[ext_resource path="res://LegendOfZelda/Assets/can-of-7up-picture-id531417466.jpg" type="Texture" id=2]
+[ext_resource path="res://LegendOfZelda/Assets/Dwarve.png" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/DialogChoices.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 7 )
 
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 82, 150 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 82, 0, 82, 150 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 164, 0, 82, 150 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 246, 0, 82, 150 )
+
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 4.0
 } ]
 
 [sub_resource type="StyleBoxEmpty" id=3]
@@ -28,18 +49,20 @@ font_data = ExtResource( 4 )
 
 [node name="Dwarf" type="Area2D"]
 position = Vector2( 60, -150 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 5
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 115 )
-scale = Vector2( 40, 50 )
+position = Vector2( 8, 65 )
+scale = Vector2( 8, 16 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
+frame = 3
+playing = true
 
 [node name="DwarfL1" type="PopupPanel" parent="."]
 margin_right = 8.0
@@ -312,7 +335,7 @@ margin_top = 5.0
 margin_right = 355.0
 margin_bottom = 85.0
 color = Color( 0.235294, 0.156863, 0.156863, 1 )
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -324,48 +347,47 @@ margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/normal_font = SubResource( 4 )
+text = "You have made a very powerful enemy on this day, bub.
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice0" type="RichTextLabel" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
-margin_top = 50.0
-margin_right = 132.0
-margin_bottom = 70.0
-rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+[node name="JoinTeamPanel" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Choice1" type="RichTextLabel" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
-margin_top = 50.0
-margin_right = 297.0
-margin_bottom = 70.0
-rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+[node name="ChoicesBorder" type="ColorRect" parent="JoinTeamPanel"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer0" type="ColorRect" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
-margin_top = 52.0
-margin_right = 20.0
-margin_bottom = 56.0
-rect_scale = Vector2( 2, 2 )
+[node name="ChoicesBox" type="ColorRect" parent="JoinTeamPanel/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pointer1" type="ColorRect" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
-margin_top = 52.0
-margin_right = 186.0
-margin_bottom = 56.0
-rect_scale = Vector2( 2, 2 )
+[node name="Description" type="RichTextLabel" parent="JoinTeamPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "Hm… alright, that’s a good way to start. Thank you, friend! Allow me to join you on your journey."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -379,4 +401,5 @@ __meta__ = {
 [connection signal="popup_hide" from="DwarfL3" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="RejectPanel" to="." method="_on_PopupPanel_popup_hide"]
-[connection signal="dialogBoxCheck" from="RejectPanel/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
+[connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_PopupPanel_popup_hide"]

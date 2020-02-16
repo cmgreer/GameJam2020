@@ -1,49 +1,56 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scripts/HunterDialogChoices.gd" type="Script" id=1]
 [ext_resource path="res://LegendOfZelda/Assets/Hunter_1.png" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/Hunter.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 3, 3 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 97, 150 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 97, 0, 97, 150 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 194, 0, 97, 150 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 291, 0, 97, 150 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "default",
 "speed": 6.0
 } ]
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="StyleBoxEmpty" id=11]
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=12]
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=13]
 size = 6
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
 font_data = ExtResource( 4 )
 
 [node name="Hunter" type="Area2D"]
@@ -56,17 +63,17 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 115 )
 scale = Vector2( 40, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 6 )
-frame = 2
+frames = SubResource( 10 )
+frame = 1
 playing = true
 
 [node name="HunterL1" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -96,7 +103,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 12 )
 text = "I used to be the greatest HUNTER in all the land. But these days, I’m feeling a little lonely."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -108,7 +115,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 13 )
 text = "Do you want to talk about it?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -120,7 +127,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 13 )
 text = "Do I look like I care? Go suck an egg!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -149,7 +156,7 @@ __meta__ = {
 [node name="HunterL2" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -179,7 +186,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 12 )
 text = "I used to have a PET, a small rabbit that I cared for very much. But he’s gone and left me. Now I’m all alone."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -191,7 +198,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 13 )
 text = "Are you sure he’s not just lost?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -203,7 +210,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 13 )
 text = "I’m about to leave you, too. Byeeeeeeeeeeeee!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -232,7 +239,7 @@ __meta__ = {
 [node name="HunterL3" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -262,7 +269,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 12 )
 text = "Hm, I hadn’t considered that. Say, friend, could you help me out and see if you can find him?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -274,7 +281,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 13 )
 text = "“Of course!”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -286,7 +293,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 13 )
 text = "“This sounds like a ‘you’ problem.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -308,6 +315,85 @@ margin_top = 52.0
 margin_right = 186.0
 margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RejectPanel" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBorder" type="ColorRect" parent="RejectPanel"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="RejectPanel/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="RejectPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "Well that was just uncalled for.
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinTeamPanel" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBorder" type="ColorRect" parent="JoinTeamPanel"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="JoinTeamPanel/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="JoinTeamPanel/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "Wonderful! My PET, my sweet Frumpkin, has returned to me! Thank you, friend! Allow me to join you on your journey."
 __meta__ = {
 "_edit_use_anchors_": false
 }
