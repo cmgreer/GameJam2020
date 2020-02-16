@@ -3,7 +3,8 @@ extends Node
 
 
 #character_status 0==dead/not unlocked, 1==injured, 2==Healthy
-var character_status = [2,2,2,2,2,2,2]
+var character_status = [2,0,2,2,2,2,2]
+var character_name = ["Player", "Hunter", "Witch", "Dwarf", "Brad Bart", "Woodsman", "Tinker"]
 
 var player_frozen = false
 
