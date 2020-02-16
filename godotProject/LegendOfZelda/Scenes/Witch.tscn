@@ -1,34 +1,49 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scripts/Witch.gd" type="Script" id=1]
-[ext_resource path="res://LegendOfZelda/Assets/can-of-7up-picture-id531417466.jpg" type="Texture" id=2]
+[ext_resource path="res://LegendOfZelda/Assets/witch.png" type="Texture" id=2]
 [ext_resource path="res://LegendOfZelda/Scripts/WitchDialogChoices.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 7 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 80, 141 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 80, 0, 80, 141 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 80, 141 )
+
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 3 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 2.5
 } ]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=7]
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=8]
 size = 6
 font_data = ExtResource( 4 )
 
 [node name="Witch" type="Area2D"]
 position = Vector2( 60, -150 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 5
 script = ExtResource( 1 )
@@ -39,12 +54,14 @@ scale = Vector2( 40, 50 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+frames = SubResource( 5 )
+frame = 3
+playing = true
 
 [node name="WitchL1" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -74,7 +91,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 7 )
 text = "I used to be the greatest WITCH in all the land. But these days, I’m feeling a tad stressed."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -86,7 +103,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "“What’s the matter?”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -98,7 +115,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "“I fail to see why I should care.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,7 +144,7 @@ __meta__ = {
 [node name="WitchL2" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -157,7 +174,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 7 )
 text = "I’ve lost my BROOMSTICK! How am I supposed to be a good WITCH without my BROOMSTICK?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -169,7 +186,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "“Life is cruel. Deal with it.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -181,7 +198,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "“Where did you last leave it?”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -210,7 +227,7 @@ __meta__ = {
 [node name="WitchL3" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -240,7 +257,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 7 )
 text = "Oh, it’s just over there - I just can’t catch it! It’s flying around on its own. Would you be a dear and catch it for me?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -252,7 +269,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "“I’ll see what I can do.”"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -264,7 +281,7 @@ margin_top = 50.0
 margin_right = 297.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "“I could. I won’t, though.”"
 __meta__ = {
 "_edit_use_anchors_": false
