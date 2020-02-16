@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://LegendOfZelda/Scenes/GearBronze.tscn" type="PackedScene" id=17]
 [ext_resource path="res://LegendOfZelda/Scenes/Gem.tscn" type="PackedScene" id=18]
 [ext_resource path="res://LegendOfZelda/Scenes/Whetstone.tscn" type="PackedScene" id=19]
+[ext_resource path="res://LegendOfZelda/Scenes/Bunny.tscn" type="PackedScene" id=20]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -76,6 +77,11 @@ position = Vector2( 131.008, 627.707 )
 [node name="7UP" parent="." instance=ExtResource( 3 )]
 position = Vector2( 458.804, 1493.96 )
 
+[node name="Broom" parent="." instance=ExtResource( 11 )]
+position = Vector2( 234.581, -471.363 )
+rotation = 2.18546
+scale = Vector2( 1, 1 )
+
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( -0.000198364, -0.000141144 )
 curve = SubResource( 1 )
@@ -91,9 +97,6 @@ anims/path = SubResource( 2 )
 [node name="BradBard" parent="Path2D/PathFollow2D" instance=ExtResource( 8 )]
 position = Vector2( 0, -0.000244141 )
 rotation = 8.64267e-06
-
-[node name="Broom" parent="Path2D/PathFollow2D/BradBard" instance=ExtResource( 11 )]
-position = Vector2( -468.819, 211.999 )
 
 [node name="Witch" parent="." instance=ExtResource( 5 )]
 position = Vector2( -213.888, 661.521 )
@@ -199,11 +202,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, 1493.96 )
-scale = Vector2( 0.5, 0.5 )
-speed = 300
-
 [node name="GearSilver" parent="." instance=ExtResource( 15 )]
 position = Vector2( -2560, -256 )
 
@@ -216,8 +214,16 @@ position = Vector2( -4500, 1450 )
 [node name="Whetstone" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1002.4, -479.105 )
 
+[node name="Bunny" parent="." instance=ExtResource( 20 )]
+position = Vector2( 889.855, 730.853 )
+
 [node name="Gem" parent="." instance=ExtResource( 18 )]
 position = Vector2( 211.75, 656.618 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 1493.96 )
+scale = Vector2( 0.5, 0.5 )
+speed = 300
 [connection signal="body_entered" from="Boat" to="Boat" method="_on_Boat_body_entered"]
 [connection signal="about_to_show" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_about_to_show"]
 [connection signal="about_to_show" from="Boat/MessageBox" to="Boat/MessageBox/ChoicesBorder/ChoicesBox" method="onShow"]

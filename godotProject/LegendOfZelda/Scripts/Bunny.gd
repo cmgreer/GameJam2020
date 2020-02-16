@@ -35,17 +35,8 @@ func _process(delta):
 		$Particles2D.hide()
 
 
-func _on_PopupPanel_about_to_show():
-	globalSingleton.player_frozen = true
-
-
-func _on_PopupPanel_popup_hide():
-	globalSingleton.player_frozen = false
-
 func _on_Bunny_body_entered(body):
 	if(body.get_name() == "Player"):
-		
-		pop.popup_centered(Vector2(360,110))
-		pop.set_position(globalSingleton.playerPosition+Vector2(-178, 60))
 		self.position=Vector2(5000,5000)
+		origin=self.position
 		globalSingleton.Items_collected.append($AnimatedSprite)
