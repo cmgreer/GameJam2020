@@ -11,31 +11,16 @@ __meta__ = {
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, 1493.96 )
-scale = Vector2( 0.5, 0.5 )
-speed = 300
-
-[node name="7UP" parent="." instance=ExtResource( 3 )]
-position = Vector2( 458.804, 1493.96 )
 <<<<<<< HEAD
 =======
-
 [node name="Brad" parent="." instance=ExtResource( 4 )]
 position = Vector2( -213.888, 1033.47 )
-
-[node name="Broom" parent="." instance=ExtResource( 6 )]
-position = Vector2( 212.16, 59.6429 )
 
 [node name="Dwarf" parent="." instance=ExtResource( 7 )]
 position = Vector2( 131.008, 627.707 )
 
 [node name="7UP" parent="." instance=ExtResource( 3 )]
 position = Vector2( 458.804, 1493.96 )
-
-[node name="Broom" parent="." instance=ExtResource( 4 )]
-position = Vector2( -2878.37, -45.1789 )
-scale = Vector2( 1, 1 )
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( -0.000198364, -0.000141144 )
@@ -57,4 +42,117 @@ rotation = 8.64267e-06
 position = Vector2( -213.888, 661.521 )
 
 [node name="Tinker" parent="." instance=ExtResource( 9 )]
->>>>>>> c0dc55943ad339b9b244c1c3094529569b58f242
+
+[node name="Woodsman" parent="." instance=ExtResource( 6 )]
+position = Vector2( -202.637, -28.4812 )
+
+[node name="Boat" type="Area2D" parent="."]
+position = Vector2( -370, 1550 )
+script = ExtResource( 11 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Boat"]
+position = Vector2( -40, 0 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boat"]
+position = Vector2( -0.00012207, 1.30664 )
+scale = Vector2( 20, 20 )
+shape = SubResource( 4 )
+
+[node name="MessageBox" type="PopupPanel" parent="Boat"]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBorder" type="ColorRect" parent="Boat/MessageBox"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesBox" type="ColorRect" parent="Boat/MessageBox/ChoicesBorder"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 85.0
+color = Color( 0.235294, 0.156863, 0.156863, 1 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="Boat/MessageBox/ChoicesBorder/ChoicesBox"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 226.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/normal_font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice0" type="RichTextLabel" parent="Boat/MessageBox/ChoicesBorder/ChoicesBox"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 157.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_fonts/normal_font = SubResource( 7 )
+text = "Yes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice1" type="RichTextLabel" parent="Boat/MessageBox/ChoicesBorder/ChoicesBox"]
+margin_left = 225.0
+margin_top = 50.0
+margin_right = 332.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_fonts/normal_font = SubResource( 7 )
+text = "No"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer0" type="ColorRect" parent="Boat/MessageBox/ChoicesBorder/ChoicesBox"]
+margin_left = 43.0
+margin_top = 52.0
+margin_right = 45.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pointer1" type="ColorRect" parent="Boat/MessageBox/ChoicesBorder/ChoicesBox"]
+margin_left = 218.0
+margin_top = 52.0
+margin_right = 220.0
+margin_bottom = 56.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+>>>>>>> 0b4415c811f4182b4ce646edba66346239defa55
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 1493.96 )
+scale = Vector2( 0.5, 0.5 )
+speed = 300
+<<<<<<< HEAD
+
+[node name="7UP" parent="." instance=ExtResource( 3 )]
+position = Vector2( 458.804, 1493.96 )
+=======
+[connection signal="body_entered" from="Boat" to="Boat" method="_on_Boat_body_entered"]
+[connection signal="about_to_show" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_about_to_show"]
+[connection signal="popup_hide" from="Boat/MessageBox" to="Boat" method="_on_MessageBox_popup_hide"]
+>>>>>>> 0b4415c811f4182b4ce646edba66346239defa55
