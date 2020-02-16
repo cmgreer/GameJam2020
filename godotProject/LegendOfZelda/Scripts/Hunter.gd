@@ -88,7 +88,7 @@ func join_team():
 
 	
 func launch_quest():
-	pass
+	globalSingleton.currrent_quests.append("Some quest text")
 
 
 func _on_RejectPanel_about_to_show():

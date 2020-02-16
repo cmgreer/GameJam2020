@@ -4,17 +4,35 @@ export var speed = 400
 
 var velocity = Vector2()
 var escapeMenu = false
-var Items_collected = [0,0,0,0,0]
 var sprites=[]
+var quest
+var quests=[]
+var Items_collected=[]
 
 
 func _draw():
+	sprites=[]
 	sprites.append($Sprite/ItemContainer)
-	for x in range(1,len(Items_collected)):
+	for x in range(1,globalSingleton.items_amount):
 		sprites.append($Sprite/ItemContainer.duplicate(15))
 		$Sprite.add_child(sprites[-1])
 		sprites[-1].position+=Vector2(10,0)*x
+	for x in range(len(Items_collected)):
+		sprites.append(Items_collected[x].duplicate(15))
+		$Sprite.add_child(sprites[-1])
+		sprites[-1].position=$Sprite/ItemContainer.position + Vector2(10,0)*x
+		var size=sprites[-1].get_viewport_rect().size
+		size=Vector2(size.x*sprites[-1].scale.x,size.y*sprites[-1].scale.y)
+		var scale=$Sprite/ItemContainer.get_rect().size[0]*$Sprite/ItemContainer.scale[0]/max(size[0],size[1])
+		sprites[-1].scale=Vector2(scale,scale)
 
+	for x in range(len(quests)):
+		quest=$Sprite/Quests.duplicate(15)
+		$Sprite.add_child(quest)
+		quest.rect_position+=Vector2(0,6)*x+Vector2(0,10)
+		quest.text=quests[x]
+		quest.rect_scale=Vector2(.25,.25)
+	
 func walk(vel):
 	$Standing.hide()
 	$WalkingBackward.hide()
@@ -63,3 +81,11 @@ func _physics_process(delta):
 	else:
 		get_input()
 		walk(Vector2.ZERO)
+	if (quests!=globalSingleton.currrent_quests):
+		quests=globalSingleton.currrent_quests
+		_draw()
+	if (Items_collected!=globalSingleton.Items_collected):
+		Items_collected=[]
+		for x in globalSingleton.Items_collected:
+			Items_collected.append(x)
+		_draw()

@@ -33,11 +33,11 @@ func _on_7UP_body_entered(body):
 
 
 func _on_PopupPanel_about_to_show():
-	globalSingleton.player_frozen -=1
+	globalSingleton.player_frozen = true
 
 
 func _on_PopupPanel_popup_hide():
-	globalSingleton.player_frozen +=1
+	globalSingleton.player_frozen = false
 
 
 func _on_ChoicesBox_dialogBoxCheck(boxNum):
@@ -49,21 +49,21 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 					dialogLevel = 2
 					popL2.popup_centered(Vector2(360,90))
 					popL2.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-
+					globalSingleton.player_frozen = true
 				1:
 					#bad answer, launch backout
 					backout()
 		2:
 			match boxNum:
-				0:
+				1:
 					#bad answer
 					backout()
-				1:
+				0:
 					#good answer, launch l3
 					dialogLevel = 3
 					popL3.popup_centered(Vector2(360,90))
 					popL3.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-
+					globalSingleton.player_frozen = true
 		3:
 			match boxNum:
 				0:
@@ -77,30 +77,15 @@ func backout():
 	dialogLevel = 10
 	popReject.popup_centered(Vector2(360,90))
 	popReject.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-	globalSingleton.character_status[3] = 0
-
+	globalSingleton.character_status[1] = 0
+	globalSingleton.player_frozen = true
 
 func join_team():
 	dialogLevel = 10
 	popJoin.popup_centered(Vector2(360,90))
 	popJoin.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-	globalSingleton.character_status[3] = 2
-
-
+	globalSingleton.character_status[1] = 2
+	globalSingleton.player_frozen = true
+	
 func launch_quest():
 	globalSingleton.currrent_quests.append("Some quest text")
-
-
-func _on_RejectPanel_about_to_show():
-	globalSingleton.player_frozen -=1
-
-
-func _on_RejectPanel_popup_hide():
-	globalSingleton.player_frozen +=1
-
-
-func _on_JoinTeamPanel_about_to_show():
-	globalSingleton.player_frozen -=1
-
-func _on_JoinTeamPanel_about_to_hide():
-	globalSingleton.player_frozen +=1
