@@ -88,10 +88,10 @@ __meta__ = {
 }
 
 [node name="Choice0" type="RichTextLabel" parent="WoodsmanL1/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
-margin_top = 50.0
-margin_right = 132.0
-margin_bottom = 70.0
+margin_left = 20.0
+margin_top = 45.0
+margin_right = 127.0
+margin_bottom = 65.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "“What’s got you tired?”"
@@ -100,10 +100,10 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="WoodsmanL1/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
-margin_top = 50.0
-margin_right = 297.0
-margin_bottom = 70.0
+margin_left = 141.0
+margin_top = 45.0
+margin_right = 298.0
+margin_bottom = 65.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "“I don’t want to talk to you. I want to punch you..”"
@@ -112,20 +112,20 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="WoodsmanL1/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
-margin_top = 52.0
-margin_right = 20.0
-margin_bottom = 56.0
+margin_left = 15.0
+margin_top = 47.0
+margin_right = 17.0
+margin_bottom = 51.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pointer1" type="ColorRect" parent="WoodsmanL1/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
-margin_top = 52.0
-margin_right = 186.0
-margin_bottom = 56.0
+margin_left = 137.0
+margin_top = 47.0
+margin_right = 139.0
+margin_bottom = 51.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -171,9 +171,9 @@ __meta__ = {
 }
 
 [node name="Choice0" type="RichTextLabel" parent="WoodsmanL2/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
+margin_left = 12.0
 margin_top = 50.0
-margin_right = 132.0
+margin_right = 119.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
@@ -183,9 +183,9 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="WoodsmanL2/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
+margin_left = 205.0
 margin_top = 50.0
-margin_right = 297.0
+margin_right = 312.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
@@ -195,9 +195,9 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="WoodsmanL2/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
+margin_left = 6.0
 margin_top = 52.0
-margin_right = 20.0
+margin_right = 8.0
 margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
@@ -205,9 +205,9 @@ __meta__ = {
 }
 
 [node name="Pointer1" type="ColorRect" parent="WoodsmanL2/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
+margin_left = 200.0
 margin_top = 52.0
-margin_right = 186.0
+margin_right = 202.0
 margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
@@ -254,10 +254,10 @@ __meta__ = {
 }
 
 [node name="Choice0" type="RichTextLabel" parent="WoodsmanL3/ChoicesBorder/ChoicesBox"]
-margin_left = 25.0
-margin_top = 50.0
-margin_right = 132.0
-margin_bottom = 70.0
+margin_left = 15.0
+margin_top = 55.0
+margin_right = 122.0
+margin_bottom = 75.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "“I’d be happy to.”"
@@ -266,10 +266,10 @@ __meta__ = {
 }
 
 [node name="Choice1" type="RichTextLabel" parent="WoodsmanL3/ChoicesBorder/ChoicesBox"]
-margin_left = 190.0
-margin_top = 50.0
-margin_right = 297.0
-margin_bottom = 70.0
+margin_left = 100.0
+margin_top = 55.0
+margin_right = 257.0
+margin_bottom = 75.0
 rect_scale = Vector2( 1.6, 1.6 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "“I cannot begin to express how much I don’t want to help you.”"
@@ -278,20 +278,20 @@ __meta__ = {
 }
 
 [node name="Pointer0" type="ColorRect" parent="WoodsmanL3/ChoicesBorder/ChoicesBox"]
-margin_left = 18.0
-margin_top = 52.0
-margin_right = 20.0
-margin_bottom = 56.0
+margin_left = 8.0
+margin_top = 57.0
+margin_right = 10.0
+margin_bottom = 61.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pointer1" type="ColorRect" parent="WoodsmanL3/ChoicesBorder/ChoicesBox"]
-margin_left = 184.0
-margin_top = 52.0
-margin_right = 186.0
-margin_bottom = 56.0
+margin_left = 93.0
+margin_top = 57.0
+margin_right = 95.0
+margin_bottom = 61.0
 rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
