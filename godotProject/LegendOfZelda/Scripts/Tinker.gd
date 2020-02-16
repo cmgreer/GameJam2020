@@ -28,7 +28,7 @@ func _on_7UP_body_entered(body):
 			dialogLevel = 1
 			popL1.popup_centered(Vector2(360,90))
 			popL1.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-		if(dialogLevel == 3 && globalSingleton.item_dictionary["Gear"]):
+		if(dialogLevel == 3 && globalSingleton.item_dictionary["Gear"]>=3):
 			join_team()
 	
 
@@ -47,6 +47,7 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 		1:
 			match boxNum:
 				0:
+
 					#good answer, launch L2
 					dialogLevel = 2
 					popL2.popup_centered(Vector2(360,90))
@@ -56,6 +57,7 @@ func _on_ChoicesBox_dialogBoxCheck(boxNum):
 					#bad answer, launch backout
 					backout()
 		2:
+
 			match boxNum:
 				0:
 					#bad answer

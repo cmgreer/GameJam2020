@@ -103,5 +103,6 @@ func _on_RejectPanel_popup_hide():
 func _on_JoinTeamPanel_about_to_show():
 	globalSingleton.player_frozen -=1
 
-func _on_JoinTeamPanel_about_to_hide():
+
+func _on_JoinTeamPanel_popup_hide():
 	globalSingleton.player_frozen +=1
