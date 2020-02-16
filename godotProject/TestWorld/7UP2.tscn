@@ -2,7 +2,7 @@
 
 [ext_resource path="res://LegendOfZelda/Scripts/HunterDialogChoices.gd" type="Script" id=1]
 [ext_resource path="res://LegendOfZelda/Assets/Hunter_1.png" type="Texture" id=2]
-[ext_resource path="res://LegendOfZelda/Scripts/Hunter.gd" type="Script" id=3]
+[ext_resource path="res://TestWorld/7UP2.gd" type="Script" id=3]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://LegendOfZelda/Scenes/TextPanel.gd" type="Script" id=5]
 
@@ -405,7 +405,3 @@ __meta__ = {
 [connection signal="popup_hide" from="HunterL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="about_to_show" from="HunterL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="HunterL3" to="." method="_on_PopupPanel_popup_hide"]
-[connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
-[connection signal="popup_hide" from="RejectPanel" to="." method="_on_RejectPanel_popup_hide"]
-[connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
-[connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_popup_hide"]

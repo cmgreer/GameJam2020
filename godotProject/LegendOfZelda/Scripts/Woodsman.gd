@@ -88,7 +88,7 @@ func join_team():
 	globalSingleton.character_status[5] = 2
 
 func launch_quest():
-	pass
+	globalSingleton.currrent_quests.append("Some quest text")
 
 func _on_RejectPanel_about_to_show():
 	globalSingleton.player_frozen -=1

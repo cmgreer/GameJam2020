@@ -9,41 +9,41 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 7 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 82, 150 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 82, 0, 82, 150 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 164, 0, 82, 150 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 246, 0, 82, 150 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 4.0
 } ]
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=8]
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=9]
 size = 6
 font_data = ExtResource( 4 )
 
@@ -60,14 +60,13 @@ scale = Vector2( 8, 16 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
-frame = 1
+frames = SubResource( 6 )
 playing = true
 
 [node name="DwarfL1" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,7 +96,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "I used to be the greatest MINER in all the land. But these days, I’m feeling a bit crowded."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -109,7 +108,7 @@ margin_top = 50.0
 margin_right = 157.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Anything I can help with?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -121,7 +120,7 @@ margin_top = 50.0
 margin_right = 332.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Eat rocks, shorty."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -150,7 +149,7 @@ __meta__ = {
 [node name="DwarfL2" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -180,7 +179,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "It’s a compulsion! I just keep collecting gems and metals and shiny stones, and now I’ve got so many I don’t know what to do with them."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -192,7 +191,7 @@ margin_top = 56.0
 margin_right = 147.0
 margin_bottom = 76.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "That’s dumb. You’re dumb."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -204,7 +203,7 @@ margin_top = 56.0
 margin_right = 308.0
 margin_bottom = 76.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "You should give them away!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -233,7 +232,7 @@ __meta__ = {
 [node name="DwarfL3" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -263,7 +262,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "I would, but… it’s hard! I know I don’t need any of this, but it’s hard to part with all the same."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -275,7 +274,7 @@ margin_top = 50.0
 margin_right = 132.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Just pick, say, 3 to keep and put the rest outside."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -287,7 +286,7 @@ margin_top = 50.0
 margin_right = 327.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "I could not begin to care."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -316,7 +315,7 @@ __meta__ = {
 [node name="RejectPanel" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -346,7 +345,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "You have made a very powerful enemy on this day, bub.
 "
 __meta__ = {
@@ -356,7 +355,7 @@ __meta__ = {
 [node name="JoinTeamPanel" type="PopupPanel" parent="."]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -386,7 +385,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "Hm… alright, that’s a good way to start. Thank you, friend! Allow me to join you on your journey."
 __meta__ = {
 "_edit_use_anchors_": false
