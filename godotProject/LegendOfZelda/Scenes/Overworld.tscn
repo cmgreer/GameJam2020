@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -8,10 +8,11 @@
 [ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=6]
 [ext_resource path="res://LegendOfZelda/Scenes/Dwarf.tscn" type="PackedScene" id=7]
 [ext_resource path="res://LegendOfZelda/Scenes/BradBard.tscn" type="PackedScene" id=8]
+[ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 137.417, 33.9034, 0, 0, 0, 0, 26.3804, 191.206, 0, 0, 0, 0, -119.818, 104.227, 0, 0, 0, 0, 137.417, 33.9034, 0, 0, 0, 0, 384.427, 21.9981 )
+"points": PoolVector2Array( 0, 0, 0, 0, 137.417, 33.9034, 0, 0, 0, 0, 26.3804, 191.206, 0, 0, 0, 0, -119.818, 104.227, 0, 0, 0, 0, 137.417, 33.9034 )
 }
 
 [sub_resource type="Animation" id=2]
@@ -67,35 +68,35 @@ position = Vector2( -213.888, 1033.47 )
 
 [node name="Broom" parent="." instance=ExtResource( 6 )]
 position = Vector2( 212.16, 59.6429 )
-scale = Vector2( 1, 1 )
 
 [node name="Dwarf" parent="." instance=ExtResource( 7 )]
 position = Vector2( 131.008, 627.707 )
-
-[node name="Tinker" parent="." instance=ExtResource( 8 )]
-position = Vector2( 475.905, 810.299 )
 
 [node name="7UP" parent="." instance=ExtResource( 3 )]
 position = Vector2( 458.804, 1493.96 )
 
 [node name="Broom" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2878.37, -45.1789 )
 scale = Vector2( 1, 1 )
 
-[node name="BradBard" parent="." instance=ExtResource( 8 )]
-position = Vector2( 137.417, 33.9034 )
-rotation = 2.18546
-
-[node name="Path2D" type="Path2D" parent="BradBard"]
-position = Vector2( 51.5482, 131.817 )
-rotation = -2.18546
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( -0.000198364, -0.000141144 )
 curve = SubResource( 1 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="BradBard/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 137.417, 33.9034 )
-rotation = 2.18546
+rotation = 2.18545
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="BradBard/Path2D/PathFollow2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
 autoplay = "path"
 anims/path = SubResource( 2 )
+
+[node name="BradBard" parent="Path2D/PathFollow2D" instance=ExtResource( 8 )]
+position = Vector2( 0, -0.000244141 )
+rotation = 8.64267e-06
+scale = Vector2( 1, 1 )
+
 [node name="Witch" parent="." instance=ExtResource( 5 )]
 position = Vector2( -213.888, 661.521 )
+
+[node name="Tinker" parent="." instance=ExtResource( 9 )]
