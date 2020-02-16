@@ -17,7 +17,7 @@ func change_scene(): #Unfinished
 		globalSingleton.next_scene = 3
 		get_tree().change_scene("res://OregonTrail/Scenes/injury.tscn")
 	elif globalSingleton.character_status[0]==0: #if player is dead
-		pass #should jump to death scene
+		get_tree().change_scene("res://OregonTrail/Scenes/8.tscn")
 	else: #Next Scene
 		get_tree().change_scene("res://OregonTrail/Scenes/3.tscn")
 

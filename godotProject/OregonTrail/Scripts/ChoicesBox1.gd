@@ -17,7 +17,7 @@ func change_scene(): #Unfinished
 		globalSingleton.next_scene = 2
 		get_tree().change_scene("res://OregonTrail/Scenes/injury.tscn")
 	elif globalSingleton.character_status[0]==0: #if player is dead
-		pass #should jump to death scene
+		get_tree().change_scene("res://OregonTrail/Scenes/8.tscn")
 	else: #Next Scene
 		get_tree().change_scene("res://OregonTrail/Scenes/2.tscn")
 
@@ -26,41 +26,34 @@ func setPopout(text):#called when popup before next scene
 	popupPan.set_position(Vector2(10,10))
 	popupPan.get_child(0).add_text(text)
 
-func choice0(): #fight
-	if globalSingleton.character_status[1]==2: #if hunter is healthy
-		change_status(1,1) #hunter injured
-		globalSingleton.beast_status = 0
-		setPopout("The brave HUNTER fights the TERRIBLE BEAST! They are gravely injured, but they have slain the creature. You continue on your way.")
+func choice0(): #Bail
+	if globalSingleton.character_status[6]>0: #if tinker is in party
+		setPopout("The Tinker springs into action, rigging up a rudimentary pump. The BOAT is emptied of water and you make it safely to the other side.")
 	else:
 		for i in range(6,-1,-1): #kill first healthy character
 			print (i, globalSingleton.character_status[i])
 			if globalSingleton.character_status[i]==2: #find first unlocked character
 				change_status(i,0) #dead character
-				popoutText = "The foolhardy " + globalSingleton.character_name[i] + " fights the TERRIBLE BEAST! They manage to best the monster, but tragically perish in the process."
-				globalSingleton.beast_status = 0
+				popoutText = "You and your PACK attempt to bail out the BOAT. However, you cannot bail quickly enough, and just before you reach the shore, the BOAT sinks, taking " + globalSingleton.character_name[i] + " with it."
 				break
 		setPopout(popoutText)
 
-func choice1(): #run
+func choice1(): #paddle faster
 	for i in range(6,-1,-1): #injure first health character from bottom up
 		if globalSingleton.character_status[i]==2: #find first unlocked character
 			change_status(i,1) #injured character
-			popoutText = "You flee from the TERRIBLE BEAST, crashing wildly through the foliage! In the chaos, " + globalSingleton.character_name[i] + " badly injures their leg."
+			popoutText = "You all attempt to paddle faster. You make it to the other side, but " + globalSingleton.character_name[i] + " overexerts themselves, incurring an injury."
 			break
 	setPopout(popoutText)
 
 
-func choice2(): #intimidate
-	if globalSingleton.character_status[1]==2: #if hunter is healthy
-		change_status(1,1) #hunter injured
-		setPopout("The brave HUNTER stands up tall and intimidates the TERRIBLE BEAST! The creature, taken aback by this show of aggression, retreats into the woods.")
-	else:
-		for i in range(6,-1,-1): #kill first health character from bottom up
-			if globalSingleton.character_status[i]==2: #find first unlocked character
-				change_status(i,0) #dead character
-				popoutText = "The foolhardy " + globalSingleton.character_name[i] + " attempts to intimidate the TERRIBLE BEAST! Unfortunately, the monster does not fall for their blustering, and strikes them down where they stand."
-				break
-		setPopout(popoutText)
+func choice2(): #swim the rest
+	for i in range(6,-1,-1): #injure first health character from bottom up
+		if globalSingleton.character_status[i]==2: #find first unlocked character
+			change_status(i,1) #injured character
+			popoutText = "You all abandon the boat and attempt to swim for the other side. You all make it, but along the way " + globalSingleton.character_name[i] + " bangs against the rocks and injures themselves."
+			break
+	setPopout(popoutText)
 		
 
 func change_selected_color():
