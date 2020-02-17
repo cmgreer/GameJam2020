@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Overworld.ogg-49f71a01249a3c7ec1a378e137d5dd03.oggstr"
+
+[deps]
+
+source_file="res://LegendOfZelda/Assets/Overworld.ogg"
+dest_files=[ "res://.import/Overworld.ogg-49f71a01249a3c7ec1a378e137d5dd03.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

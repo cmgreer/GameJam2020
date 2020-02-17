@@ -90,7 +90,7 @@ func join_team():
 
 	
 func launch_quest():
-	globalSingleton.currrent_quests.append("Some quest text")
+	globalSingleton.currrent_quests.append("Find the HUNTER'S PET")
 
 
 func _on_RejectPanel_about_to_show():
