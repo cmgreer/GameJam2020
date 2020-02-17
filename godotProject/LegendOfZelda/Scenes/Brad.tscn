@@ -72,6 +72,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
+frame = 4
 playing = true
 
 [node name="BradL1" type="PopupPanel" parent="."]
