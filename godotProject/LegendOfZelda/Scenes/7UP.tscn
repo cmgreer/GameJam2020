@@ -67,7 +67,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="HunterL1" type="PopupPanel" parent="."]
@@ -406,13 +406,13 @@ __meta__ = {
 [connection signal="about_to_show" from="HunterL2" to="HunterL2/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="popup_hide" from="HunterL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="HunterL2/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
-[connection signal="about_to_show" from="HunterL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="about_to_show" from="HunterL3" to="HunterL3/ChoicesBorder/ChoicesBox" method="onShow"]
+[connection signal="about_to_show" from="HunterL3" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="HunterL3" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="HunterL3/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
 [connection signal="about_to_show" from="RejectPanel" to="RejectPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
 [connection signal="popup_hide" from="RejectPanel" to="." method="_on_RejectPanel_popup_hide"]
-[connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
 [connection signal="about_to_show" from="JoinTeamPanel" to="JoinTeamPanel/ChoicesBorder/ChoicesBox" method="onShow"]
+[connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
 [connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_PopupPanel_popup_hide"]

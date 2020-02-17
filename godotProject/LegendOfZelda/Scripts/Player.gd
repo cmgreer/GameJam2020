@@ -7,6 +7,7 @@ var escapeMenu = false
 var sprites=[]
 var quest
 var quests=[]
+var questsImg=[]
 var Items_collected=[]
 
 
@@ -25,13 +26,15 @@ func _draw():
 		size=Vector2(size.x*sprites[-1].scale.x,size.y*sprites[-1].scale.y)
 		var scale=$Sprite/ItemContainer.get_rect().size[0]*$Sprite/ItemContainer.scale[0]/max(size[0],size[1])
 		sprites[-1].scale=Vector2(scale,scale)
-
+	for x in questsImg:
+		x.rect_position=Vector2(5000,5000)
+	questsImg=[]
 	for x in range(len(quests)):
-		quest=$Sprite/Quests.duplicate(15)
-		$Sprite.add_child(quest)
-		quest.rect_position+=Vector2(0,6)*x+Vector2(0,10)
-		quest.text=quests[x]
-		quest.rect_scale=Vector2(.25,.25)
+		questsImg.append($Sprite/Quests.duplicate(15))
+		$Sprite.add_child(questsImg[-1])
+		questsImg[-1].rect_position+=Vector2(0,6)*x+Vector2(0,10)
+		questsImg[-1].text=quests[x]
+		questsImg[-1].rect_scale=Vector2(.25,.25)
 	
 func walk(vel):
 	$Standing.hide()

@@ -85,7 +85,12 @@ func join_team():
 	dialogLevel = 10
 	popJoin.popup_centered(Vector2(360,90))
 	popJoin.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
+<<<<<<< HEAD
 	globalSingleton.character_status[2] = 2
+=======
+	globalSingleton.character_status[3] = 2
+	globalSingleton.currrent_quests.erase("Find the WITCH'S BROOM")
+>>>>>>> 9782bfbabe7bd5ab8ab1e9bba3626459ab170fc1
 
 
 func launch_quest():
