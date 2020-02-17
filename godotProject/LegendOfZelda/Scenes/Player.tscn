@@ -190,7 +190,7 @@ script = ExtResource( 2 )
 
 [node name="Standing" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-frame = 3
+frame = 9
 playing = true
 
 [node name="WalkingLeft" type="AnimatedSprite" parent="."]
@@ -198,26 +198,24 @@ visible = false
 rotation = 3.14159
 scale = Vector2( 1, -1 )
 frames = SubResource( 14 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="WalkingRight" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 14 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="WalkingBackward" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 23 )
-frame = 5
 playing = true
 
 [node name="WalkingForward" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( -4.914, 0 )
 frames = SubResource( 32 )
-frame = 5
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -274,7 +272,7 @@ texture = ExtResource( 8 )
 [node name="Quests" type="RichTextLabel" parent="Sprite"]
 margin_left = 10.0
 margin_top = -48.0
-margin_right = 165.0
+margin_right = 308.0
 margin_bottom = -23.0
 rect_scale = Vector2( 0.5, 0.5 )
 text = "Quests:"
