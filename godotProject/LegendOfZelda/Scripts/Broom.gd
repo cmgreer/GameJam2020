@@ -8,7 +8,6 @@ var velocity = Vector2()
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var pop = get_child(2)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,18 +28,8 @@ func _process(delta):
 		move_and_collide(velocity * delta)
 
 
-
-
-func _on_PopupPanel_about_to_show():
-	globalSingleton.player_frozen -=1
-
-
-func _on_PopupPanel_popup_hide():
-	globalSingleton.player_frozen +=1
-
-
 func _on_Area2D_body_entered(body):
 	if(body.get_name() == "Player"):
 		globalSingleton.Items_collected.append($AnimatedSprite)
-		pop.popup_centered(Vector2(360,110))
-		pop.set_position(globalSingleton.playerPosition+Vector2(-178, 60))
+		globalSingleton.item_dictionary["Broom"] = true
+		self.position=Vector2(5000,5000)

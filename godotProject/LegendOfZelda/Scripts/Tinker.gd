@@ -91,7 +91,7 @@ func join_team():
 
 
 func launch_quest():
-	globalSingleton.currrent_quests.append("Some quest text")
+	globalSingleton.currrent_quests.append("Find 3 GEARS for the TINKER")
 
 func _on_RejectPanel_about_to_show():
 	globalSingleton.player_frozen -=1

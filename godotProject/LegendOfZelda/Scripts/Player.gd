@@ -91,7 +91,9 @@ func _physics_process(delta):
 		get_input()
 		walk(Vector2.ZERO)
 	if (quests!=globalSingleton.currrent_quests):
-		quests=globalSingleton.currrent_quests
+		quests=[]
+		for x in globalSingleton.currrent_quests:
+			quests.append(x)
 		_draw()
 	if (Items_collected!=globalSingleton.Items_collected):
 		Items_collected=[]

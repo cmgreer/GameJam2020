@@ -90,7 +90,7 @@ func join_team():
 	globalSingleton.character_status[5] = 2
 
 func launch_quest():
-	globalSingleton.currrent_quests.append("Some quest text")
+	globalSingleton.currrent_quests.append("Find a WHETSTONE for the WOODSMAN")
 
 func _on_RejectPanel_about_to_show():
 	globalSingleton.player_frozen -=1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://LegendOfZelda/Scenes/Witch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://LegendOfZelda/Scenes/Woodsman.tscn" type="PackedScene" id=6]
 [ext_resource path="res://LegendOfZelda/Scenes/Dwarf.tscn" type="PackedScene" id=7]
-[ext_resource path="res://LegendOfZelda/Scenes/BradBard.tscn" type="PackedScene" id=8]
 [ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=9]
 [ext_resource path="res://LegendOfZelda/Assets/boat.png" type="Texture" id=10]
 [ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=11]
@@ -15,26 +14,6 @@
 [ext_resource path="res://LegendOfZelda/Scripts/OptionalBoatLauncher.gd" type="Script" id=13]
 [ext_resource path="res://LegendOfZelda/Scripts/Boat.gd" type="Script" id=14]
 [ext_resource path="res://LegendOfZelda/Assets/Overworld.ogg" type="AudioStream" id=15]
-
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 137.417, 33.9034, 0, 0, 0, 0, 26.3804, 191.206, 0, 0, 0, 0, -119.818, 104.227, 0, 0, 0, 0, 137.417, 33.9034 )
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "path"
-length = 5.0
-loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:unit_offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 5 )
-}
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -82,24 +61,10 @@ position = Vector2( 131.008, 627.707 )
 [node name="7UP" parent="." instance=ExtResource( 3 )]
 position = Vector2( 458.804, 1493.96 )
 
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( -0.000198364, -0.000141144 )
-curve = SubResource( 1 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 137.417, 33.9034 )
-rotation = 2.18545
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
-autoplay = "path"
-anims/path = SubResource( 2 )
-
-[node name="BradBard" parent="Path2D/PathFollow2D" instance=ExtResource( 8 )]
-position = Vector2( 0, -0.000244141 )
-rotation = 8.64267e-06
-
-[node name="Broom" parent="Path2D/PathFollow2D/BradBard" instance=ExtResource( 11 )]
-position = Vector2( -468.819, 211.999 )
+[node name="Broom" parent="." instance=ExtResource( 11 )]
+position = Vector2( 234.581, -471.363 )
+rotation = 2.18546
+scale = Vector2( 1, 1 )
 
 [node name="Witch" parent="." instance=ExtResource( 5 )]
 position = Vector2( -213.888, 661.521 )
