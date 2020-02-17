@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -9,7 +9,7 @@
 [ext_resource path="res://LegendOfZelda/Scenes/Dwarf.tscn" type="PackedScene" id=7]
 [ext_resource path="res://LegendOfZelda/Scenes/BradBard.tscn" type="PackedScene" id=8]
 [ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=9]
-[ext_resource path="res://LegendOfZelda/Assets/sanic.jpg" type="Texture" id=10]
+[ext_resource path="res://LegendOfZelda/Assets/boat.png" type="Texture" id=10]
 [ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=11]
 [ext_resource path="res://OregonTrail/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://LegendOfZelda/Scripts/OptionalBoatLauncher.gd" type="Script" id=13]
@@ -35,23 +35,33 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 5 )
 }
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 240, 93 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 240, 0, 240, 93 )
+
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 4.0
 } ]
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=10]
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=8]
 size = 8
 font_data = ExtResource( 12 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 size = 6
 font_data = ExtResource( 12 )
 
@@ -99,23 +109,25 @@ position = Vector2( -213.888, 661.521 )
 position = Vector2( -202.637, -28.4812 )
 
 [node name="Boat" type="Area2D" parent="."]
-position = Vector2( -370, 1550 )
+position = Vector2( -381.087, 1562.94 )
 script = ExtResource( 14 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boat"]
-position = Vector2( -40, 0 )
-scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 3 )
+position = Vector2( 51.4704, -33.2621 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boat"]
-position = Vector2( -0.00012207, 1.30664 )
+position = Vector2( 24.9464, -10.7043 )
 scale = Vector2( 20, 20 )
-shape = SubResource( 4 )
+shape = SubResource( 10 )
 
 [node name="MessageBox" type="PopupPanel" parent="Boat"]
 margin_right = 8.0
 margin_bottom = 8.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -145,7 +157,7 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -156,7 +168,7 @@ margin_top = 50.0
 margin_right = 157.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "No"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -168,7 +180,7 @@ margin_top = 50.0
 margin_right = 332.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Yes"
 __meta__ = {
 "_edit_use_anchors_": false
