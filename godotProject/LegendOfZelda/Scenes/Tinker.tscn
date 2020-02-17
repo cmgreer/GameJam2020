@@ -67,7 +67,6 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
-frame = 2
 playing = true
 
 [node name="TinkerL1" type="PopupPanel" parent="."]
@@ -398,21 +397,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="." to="." method="_on_7UP_body_entered"]
-[connection signal="about_to_show" from="TinkerL1" to="TinkerL1/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="TinkerL1" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="about_to_show" from="TinkerL1" to="TinkerL1/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="popup_hide" from="TinkerL1" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="TinkerL1/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
 [connection signal="about_to_show" from="TinkerL2" to="TinkerL2/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="TinkerL2" to="." method="_on_PopupPanel_about_to_show"]
 [connection signal="popup_hide" from="TinkerL2" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="TinkerL2/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
-[connection signal="about_to_show" from="TinkerL3" to="TinkerL3/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="TinkerL3" to="." method="_on_PopupPanel_about_to_show"]
+[connection signal="about_to_show" from="TinkerL3" to="TinkerL3/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="popup_hide" from="TinkerL3" to="." method="_on_PopupPanel_popup_hide"]
 [connection signal="dialogBoxCheck" from="TinkerL3/ChoicesBorder/ChoicesBox" to="." method="_on_ChoicesBox_dialogBoxCheck"]
-[connection signal="about_to_show" from="RejectPanel" to="RejectPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="RejectPanel" to="." method="_on_RejectPanel_about_to_show"]
+[connection signal="about_to_show" from="RejectPanel" to="RejectPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="popup_hide" from="RejectPanel" to="." method="_on_PopupPanel_popup_hide"]
-[connection signal="about_to_show" from="JoinTeamPanel" to="JoinTeamPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="about_to_show" from="JoinTeamPanel" to="." method="_on_JoinTeamPanel_about_to_show"]
+[connection signal="about_to_show" from="JoinTeamPanel" to="JoinTeamPanel/ChoicesBorder/ChoicesBox" method="onShow"]
 [connection signal="popup_hide" from="JoinTeamPanel" to="." method="_on_PopupPanel_popup_hide"]

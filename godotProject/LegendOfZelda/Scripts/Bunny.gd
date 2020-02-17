@@ -40,3 +40,4 @@ func _on_Bunny_body_entered(body):
 		self.position=Vector2(5000,5000)
 		origin=self.position
 		globalSingleton.Items_collected.append($AnimatedSprite)
+		globalSingleton.item_dictionary["Bunny"] = true

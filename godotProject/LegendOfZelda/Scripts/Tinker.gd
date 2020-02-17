@@ -28,7 +28,7 @@ func _on_7UP_body_entered(body):
 			dialogLevel = 1
 			popL1.popup_centered(Vector2(360,90))
 			popL1.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-		if(dialogLevel == 3 && globalSingleton.item_dictionary["Gear"]>=3):
+		if(dialogLevel == 3 && globalSingleton.item_dictionary["Gears"]>=3):
 			join_team()
 	
 
@@ -88,7 +88,7 @@ func join_team():
 	popJoin.popup_centered(Vector2(360,90))
 	popJoin.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
 	globalSingleton.character_status[6] = 2
-
+	globalSingleton.currrent_quests.erase("Find 3 GEARS for the TINKER")
 
 func launch_quest():
 	globalSingleton.currrent_quests.append("Find 3 GEARS for the TINKER")

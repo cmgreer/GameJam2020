@@ -45,7 +45,7 @@ func choice1(): #Go long way round
 	if globalSingleton.run_beast==1:
 		for i in range(6,-1,-1): #kill first healthy character
 			if globalSingleton.character_status[i]>0: #find first unlocked character
-				change_status(i,1) #kill character
+				change_status(i,0) #kill character
 				popoutText = "You attempt to navigate around the THICK FOLIAGE. However, it is slow going, and the TERRIBLE BEAST catches up with you and kills " + globalSingleton.character_name[i] + "."
 				break
 	else:

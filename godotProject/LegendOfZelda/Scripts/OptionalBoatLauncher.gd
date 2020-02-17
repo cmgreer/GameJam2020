@@ -102,6 +102,6 @@ func onShow():
 	globalSingleton.interactingRight = funcref(self, 'rightPassthrough')
 	
 func launch_boat():
-	pass
+	get_tree().change_scene("res://OregonTrail/Scenes/1.tscn")
 
 

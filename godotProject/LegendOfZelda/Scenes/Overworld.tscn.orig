@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://LegendOfZelda/Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LegendOfZelda/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://LegendOfZelda/Scenes/Witch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://LegendOfZelda/Scenes/Woodsman.tscn" type="PackedScene" id=6]
 [ext_resource path="res://LegendOfZelda/Scenes/Dwarf.tscn" type="PackedScene" id=7]
-[ext_resource path="res://LegendOfZelda/Scenes/Bunny.tscn" type="PackedScene" id=8]
 [ext_resource path="res://LegendOfZelda/Scenes/Tinker.tscn" type="PackedScene" id=9]
 [ext_resource path="res://LegendOfZelda/Assets/boat.png" type="Texture" id=10]
 [ext_resource path="res://LegendOfZelda/Scenes/Broom.tscn" type="PackedScene" id=11]
@@ -15,11 +14,27 @@
 [ext_resource path="res://LegendOfZelda/Scripts/OptionalBoatLauncher.gd" type="Script" id=13]
 [ext_resource path="res://LegendOfZelda/Scripts/Boat.gd" type="Script" id=14]
 [ext_resource path="res://LegendOfZelda/Assets/Overworld.ogg" type="AudioStream" id=15]
-[ext_resource path="res://LegendOfZelda/Scenes/Whetstone.tscn" type="PackedScene" id=16]
-[ext_resource path="res://LegendOfZelda/Scenes/GearGold.tscn" type="PackedScene" id=17]
-[ext_resource path="res://LegendOfZelda/Scenes/Gem.tscn" type="PackedScene" id=18]
-[ext_resource path="res://LegendOfZelda/Scenes/GearBronze.tscn" type="PackedScene" id=19]
-[ext_resource path="res://LegendOfZelda/Scenes/GearSilver.tscn" type="PackedScene" id=20]
+
+<<<<<<< HEAD
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 137.417, 33.9034, 0, 0, 0, 0, 26.3804, 191.206, 0, 0, 0, 0, -119.818, 104.227, 0, 0, 0, 0, 137.417, 33.9034 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "path"
+length = 5.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -32,6 +47,9 @@ atlas = ExtResource( 10 )
 region = Rect2( 240, 0, 240, 93 )
 
 [sub_resource type="SpriteFrames" id=5]
+=======
+[sub_resource type="SpriteFrames" id=1]
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 animations = [ {
 "frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
@@ -39,6 +57,7 @@ animations = [ {
 "speed": 4.0
 } ]
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=7]
@@ -48,6 +67,17 @@ size = 8
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=9]
+=======
+[sub_resource type="CircleShape2D" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=5]
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 size = 6
 font_data = ExtResource( 12 )
 
@@ -58,57 +88,82 @@ __meta__ = {
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 
-[node name="Bunny" parent="." instance=ExtResource( 8 )]
-position = Vector2( -818.332, -934.351 )
-scale = Vector2( 1, 1 )
-
 [node name="Brad" parent="." instance=ExtResource( 4 )]
-position = Vector2( 571.464, 924.445 )
+position = Vector2( -213.888, 1033.47 )
 
 [node name="Dwarf" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1802.29, -1106.32 )
-
-[node name="Whetstone" parent="." instance=ExtResource( 16 )]
-position = Vector2( 225.352, -1057.42 )
-scale = Vector2( 2.5, 2.5 )
+position = Vector2( 131.008, 627.707 )
 
 [node name="7UP" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1037.98, -540.563 )
+position = Vector2( 458.804, 1493.96 )
 
+<<<<<<< HEAD
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( -0.000198364, -0.000141144 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 137.417, 33.9034 )
+rotation = 2.18545
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+autoplay = "path"
+anims/path = SubResource( 2 )
+
+[node name="BradBard" parent="Path2D/PathFollow2D" instance=ExtResource( 8 )]
+position = Vector2( 0, -0.000244141 )
+rotation = 8.64267e-06
+=======
 [node name="Broom" parent="." instance=ExtResource( 11 )]
 position = Vector2( 234.581, -471.363 )
 rotation = 2.18546
-scale = Vector2( 1, 1 )
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
+
+[node name="Broom" parent="Path2D/PathFollow2D/BradBard" instance=ExtResource( 11 )]
+position = Vector2( -468.819, 211.999 )
 
 [node name="Witch" parent="." instance=ExtResource( 5 )]
-position = Vector2( -463.353, 114.547 )
+position = Vector2( -213.888, 661.521 )
 
 [node name="Tinker" parent="." instance=ExtResource( 9 )]
-position = Vector2( -1898.76, -174.023 )
 
 [node name="Woodsman" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1066.86, 80.5441 )
+position = Vector2( -202.637, -28.4812 )
 
 [node name="Boat" type="Area2D" parent="."]
 position = Vector2( -381.087, 1562.94 )
 script = ExtResource( 14 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boat"]
+<<<<<<< HEAD
 position = Vector2( 51.4704, -33.2621 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
+=======
+position = Vector2( -40, 0 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boat"]
 position = Vector2( 24.9464, -10.7043 )
 scale = Vector2( 20, 20 )
+<<<<<<< HEAD
 shape = SubResource( 10 )
+=======
+shape = SubResource( 2 )
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 
 [node name="MessageBox" type="PopupPanel" parent="Boat"]
-visible = true
 margin_right = 8.0
 margin_bottom = 8.0
+<<<<<<< HEAD
 custom_styles/panel = SubResource( 7 )
+=======
+custom_styles/panel = SubResource( 3 )
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -138,7 +193,11 @@ margin_top = 5.0
 margin_right = 226.0
 margin_bottom = 41.0
 rect_scale = Vector2( 1.5, 1.5 )
+<<<<<<< HEAD
 custom_fonts/normal_font = SubResource( 8 )
+=======
+custom_fonts/normal_font = SubResource( 4 )
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -149,8 +208,13 @@ margin_top = 50.0
 margin_right = 157.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
+<<<<<<< HEAD
 custom_fonts/normal_font = SubResource( 9 )
 text = "No"
+=======
+custom_fonts/normal_font = SubResource( 5 )
+text = "Yes"
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -161,8 +225,13 @@ margin_top = 50.0
 margin_right = 332.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.6, 1.6 )
+<<<<<<< HEAD
 custom_fonts/normal_font = SubResource( 9 )
 text = "Yes"
+=======
+custom_fonts/normal_font = SubResource( 5 )
+text = "No"
+>>>>>>> 46c2260df8d08ed1d52c867e92dd8202e9ea3307
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -186,20 +255,6 @@ rect_scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="GearSilver" parent="." instance=ExtResource( 20 )]
-position = Vector2( -4152.66, -133.373 )
-scale = Vector2( 24, 24 )
-
-[node name="GearBronze" parent="." instance=ExtResource( 19 )]
-position = Vector2( -3495.21, -94.2206 )
-scale = Vector2( 2.4, 2.4 )
-
-[node name="GearGold" parent="." instance=ExtResource( 17 )]
-position = Vector2( -3987.74, -687.414 )
-
-[node name="Gem" parent="." instance=ExtResource( 18 )]
-position = Vector2( -1918.11, -1117.97 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, 1493.96 )
