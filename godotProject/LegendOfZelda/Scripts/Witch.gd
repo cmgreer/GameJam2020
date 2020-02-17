@@ -78,14 +78,14 @@ func backout():
 	dialogLevel = 10
 	popReject.popup_centered(Vector2(360,90))
 	popReject.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-	globalSingleton.character_status[3] = 0
+	globalSingleton.character_status[2] = 0
 
 
 func join_team():
 	dialogLevel = 10
 	popJoin.popup_centered(Vector2(360,90))
 	popJoin.set_position(globalSingleton.playerPosition+Vector2(-178, 80))
-	globalSingleton.character_status[3] = 2
+	globalSingleton.character_status[2] = 2
 
 
 func launch_quest():
